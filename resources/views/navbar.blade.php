@@ -18,7 +18,7 @@
 }
 
 .container {
-    display: flex;
+    
     justify-content: space-between;
     align-items: center;
 }
@@ -99,7 +99,7 @@
 
 <nav class="navbar">
     <div class="container">
-    <img src="/images/11.png" alt="Flowers" style="width:auto;" height="45px">
+        <img src="/images/11.png" alt="Flowers" style="width:auto;" height="45px">
         <div class="menu-btn" onclick="toggleNav()">
             <div></div>
             <div></div>
