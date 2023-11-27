@@ -99,7 +99,9 @@
 
 <nav class="navbar">
     <div class="container">
-        <img src="/images/11.png" alt="Flowers" style="width:auto;" height="45px">
+        <a href="/">
+            <img src="/images/11.png" alt="Flowers" style="width:auto;" height="45px">
+        </a>
         <div class="menu-btn" onclick="toggleNav()">
             <div></div>
             <div></div>
