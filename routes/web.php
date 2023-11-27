@@ -14,7 +14,7 @@ use App\Http\Controllers\AboutUsController;
 |
 */
 Route::get('/', function () {
-    return view('hello');
+    return view('homepage');
 });
 
 Route::middleware([
