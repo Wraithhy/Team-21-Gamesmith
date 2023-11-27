@@ -7,7 +7,8 @@
     <style>
       body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    font-family: 'Roboto', sans-serif;
 }
 
 .navbar {
