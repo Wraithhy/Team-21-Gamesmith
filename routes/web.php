@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('hello');
+});
+
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -27,6 +31,10 @@ Route::middleware([
     })->name('dashboard');
 });
 
+Route::get('/', function () {
+    return view('checkout-page');
+});
+=======
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
