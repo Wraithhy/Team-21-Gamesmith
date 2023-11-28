@@ -1,3 +1,26 @@
+
+body {
+    background-color: #F0F2EF;
+    font-family: "Bebas Neue", sans-serif;
+   
+}
+
+
+p.text {
+ color: #a5a7a3 ;
+
+}
+
+
+h1,h2,h5 {
+    color: #1E1E1E;
+    stroke: #1E1E1E;
+    
+}
+
+img.catimg {
+     padding: 10px;
+
 @import url(https://fonts.googleapis.com/css?family=Poppins);
 * {
     padding: 0;
@@ -149,4 +172,5 @@ body {
     padding-bottom: 10px;
     border-bottom: 2px solid #98d831;
     margin-bottom: 10px;
+
 }
