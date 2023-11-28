@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
     return view('homepage');
+
+});
+
 });
 
 Route::middleware([
@@ -25,4 +29,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+});
+
+Route::get('/checkout', function () {
+    return view('checkout-page');
 });
