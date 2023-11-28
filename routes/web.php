@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactUsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/', function () {
+    return view('hello');
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,3 +32,9 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+
+Route::get('/contactus', [ContactUsController::class, 'index']);
+
+
