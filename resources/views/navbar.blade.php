@@ -109,7 +109,7 @@
         </div>
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="about-us">About Us</a>
@@ -118,7 +118,7 @@
                 <a class="nav-link" href="#">Contact Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Checkout</a>
+                <a class="nav-link" href="/checkout">Checkout</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Log In</a>
