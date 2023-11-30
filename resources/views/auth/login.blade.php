@@ -1,48 +1,50 @@
-<x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
-
-        <x-validation-errors class="mb-4" />
-
-        @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href= "{{asset('css/style.css')}}" />
+        <title>GameSmith - Login</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box form-box">
+                <header>GameSmith Login</header>
+                <form action="" method="post">
+                    <div class="field input">
+                        <label for="username"> Username </label>
+                        <input
+                            type="text"
+                            name="username"
+                            id="username"
+                            required
+                        />
+                    </div>
+                    <div class="field input">
+                        <label for="password"> Password </label>
+                        <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            required
+                        />
+                    </div>
+                    <div class="field">
+                        <input
+                            type="submit"
+                            class="btn"
+                            name="submit"
+                            value="Login"
+                            required
+                        />
+                    </div>
+                    <div class="link">
+                        Don't have account?
+                        <a href="register.html"> Register Now </a>
+                    </div>
+                </form>
             </div>
-        @endif
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <div>
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-            </div>
-
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ml-4">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout>
+        </div>
+    </body>
+</html>
