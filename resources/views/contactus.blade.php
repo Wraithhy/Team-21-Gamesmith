@@ -75,6 +75,8 @@
         
         </style>
 
+        @include ('navbar')
+
     </head>
 
     <body>
@@ -120,7 +122,9 @@
 
           ?>
 
-
+        <footer>
+            @include('footer')
+        </footer>
 
     </body>
 
