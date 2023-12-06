@@ -9,55 +9,45 @@
     margin: 0;
     font-family: 'Arial', sans-serif;
 }
-
 .navbar {
     background-color: #1E1E1E;
     padding: 15px 0;
     border-bottom: 2px solid #333;
     border-radius: 10px; 
 }
-
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .navbar-brand {
     color: #fff;
     text-decoration: none;
     font-size: 1.5em;
 }
-
 .nav {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
-
 .nav-item {
     margin-right: 20px;
 }
-
 .nav-link {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
 }
-
-
 .nav-link:hover {
     text-decoration: underline;
     color: #98D831; 
 }
-
 .menu-btn {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
-
 .menu-btn div {
     width: 25px;
     height: 3px;
@@ -65,8 +55,7 @@
     margin: 5px 0;
     transition: 0.4s;
 }
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
     .nav {
         display: none;
         flex-direction: column;
@@ -78,28 +67,24 @@
         background-color: #333;
         z-index: 1;
     }
-
     .nav-item {
         margin: 0;
         padding: 15px;
     }
-
     .menu-btn {
         display: flex;
     }
-
     .nav.expanded {
         display: flex;
     }
 }
-
     </style>
 </head>
 <body>
 
 <nav class="navbar">
     <div class="container">
-        <a class="navbar-brand" href="#">Gamesmith</a>
+    <img src="/images/11.png" alt="Flowers" style="width:auto;" height="45px">
         <div class="menu-btn" onclick="toggleNav()">
             <div></div>
             <div></div>
@@ -133,7 +118,6 @@
         const nav = document.querySelector('.nav');
         nav.classList.toggle('expanded');
     }
-
     window.addEventListener('resize', function () {
         const nav = document.querySelector('.nav');
         if (window.innerWidth > 768) {

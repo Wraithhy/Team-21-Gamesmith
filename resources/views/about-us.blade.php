@@ -1,115 +1,111 @@
 @include('navbar')
-<!DOCTYPE html>
 
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-
-    <link rel="stylesheet" href="styles.css">
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   <title>About Us</title>
+<link rel="stylesheet" href="styles.css">
 
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 10px;
             padding: 10px;
             box-sizing: border-box;
-            background-color: #4A5859; /* Dark teal background */
-            color: #F0F2EF; /* Light grey text */
+            background-color: #4A5859;
+            color: #F0F2EF;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        #about-us-container {
-            max-width:auto;
+        .about-container,
+        .extra-info {
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #4A5859; /* Dark teal box background */
+            background-color: #4A5859;
             border-radius: 10px;
-        }
-
-        #about-us-heading {
-            color: #98d831; 
-            font-size: 40px; /* Larger font size */
-            text-align: center;
-        }
-
-        #about-us-content {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
         }
 
-        #our-story,
-        #contact-paragraph {
+        .about-heading {
+            color: #98d831;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content,
+        .extra-info {
+            margin-top: 20px;
+        }
+
+        .story,
+        .contact-para,
+        .random-info {
             margin-bottom: 15px;
             line-height: 1.6;
-            font-size: 25px; /* Larger font size */
-            color : #
-        
+            font-size: 20px;
+            color: #F0F2EF;
         }
 
-        #contact-link {
-            color: #F0F2EF; /* Light grey link color */
+        .contact-link {
+            color: #98D831;
         }
 
-        #image-container {
+        .unique-container {
             margin-top: 20px;
-            padding: 20px; /* Added padding for the image box */
-            background-color: #1E1E1E; /* Dark grey box background */
+            padding: 20px;
+            background-color: #1E1E1E;
             border-radius: 10px;
             text-align: center;
         }
 
-        #page-image {
+        .page-image {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-        }
+            border: 5px solid #98d831;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+            .site-footer {
+            margin-top: auto;
+            padding: 20px;
+            background-color: #1E1E1E;
+            color: #98D831;
+            font-size: 18px;
+            border-radius: 10px;
+            text-align: center;}
     </style>
-
 </head>
-
 <body>
+    <div class="about-container">
+        <h1 class="about-heading">About Us</h1>
+    <div class="content">
 
-    <div id="about-us-container">
+            <p class="story">
+                Welcome to Gamesmiths, your ultimate destination for cutting-edge gaming accessories that won't break the bank! Founded in 2023 by a passionate team of computer scientists, also known as Group 21, Gamesmith emerged from a shared love for gaming and a mission to reintroduce affordability to the world of gaming accessories.            </p>
 
-        <h1 id="about-us-heading">About Us</h1>
-
-        <div id="about-us-content">
-
-<p id="our-story">
-    Welcome to Gamesmiths, your ultimate destination for cutting-edge gaming accessories that won't break the bank! Founded in 2023 by a passionate team of computer scientists, also known as Group 21, Gamesmith emerged from a shared love for gaming and a mission to reintroduce affordability to the world of gaming accessories.
-</p>
-
-<p>
-    At Gamesmith, we understand that gaming is not just a pastime; it's a lifestyle. Our team comprises avid gamers who recognized the challenges of finding high-quality gaming gear at reasonable prices. Thus, Gamesmith was born out of the desire to provide a solution to this dilemma, offering a curated selection of products that strike the perfect balance between performance, style, and affordability.
-</p>
-
-<p>
-    What sets Gamesmith apart is our commitment to delivering a diverse range of gaming accessories, from precision-engineered peripherals to state-of-the-art hardware, all designed to enhance your gaming experience. Our product lineup includes everything from ergonomic gaming mice and mechanical keyboards to immersive virtual reality headsets, ensuring that every gamer can find the perfect accessory to level up their setup.
-</p>
-
-<p>
-    As a gaming accessory store, we take pride in staying at the forefront of gaming technology trends. Our team of computer scientists brings a wealth of expertise to the development process, ensuring that each product reflects the latest advancements in the gaming industry. From RGB lighting effects to customizable macros, our accessories are not just tools but extensions of your gaming identity.
-</p>
-
-<p>
-    Gamesmith is more than just a store; it's a community. Join us on social media and connect with fellow gamers who share your passion. Stay updated on the latest releases, exclusive promotions, and gaming events. Together, let's redefine the gaming landscape and make high-quality accessories accessible to all.
-</p>
-
-<p id="contact-paragraph">
-    Thank you for choosing Gamesmiths for your gaming needs. If you have any questions, feedback, or inquiries, please feel free to <a href="mailto:gamesmitch@gmail.com" id="contact-link">contact us</a>. Level up your gaming experience with Gamesmith!
-</p>
-</div>
-
+            <p class="contact-para">
+                Thank you for choosing Gamesmiths for your gaming needs. If you have any questions, feedback, or inquiries, please feel free to <a href="mailto:gamesmitch@gmail.com" class="contact-link">contact us</a>. Level up your gaming experience with Gamesmith!
+            </p>
+        </div>
 
     </div>
-
-    <div id="image-container">
-    <img id="page-image" src="images/tester.jpg" alt="Description of the image">
-</div>
-
-
+<div class="unique-container">
+     <img class="page-image" src="images/gamesmith.png" alt="Description of the image">
+    </div>
+    <div class="extra-info">
+        <p class="random-info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lobortis feugiat vivamus at augue eget arcu dictum varius duis. Elementum pulvinar etiam non quam lacus suspendisse faucibus. Sociis natoque penatibus et magnis dis parturient montes. Nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Varius duis at consectetur lorem donec massa sapien. Vitae et leo duis ut diam quam. Tortor dignissim convallis aenean et. Et netus et malesuada fames. Nullam ac tortor vitae purus faucibus ornare suspendisse sed. Cursus mattis molestie a iaculis at. Morbi tristique senectus et netus. Mi bibendum neque egestas congue quisque. A arcu cursus vitae congue mauris rhoncus aenean vel. Eu turpis egestas pretium aenean pharetra magna ac. Libero justo laoreet sit amet cursus sit. Auctor elit sed vulputate mi sit amet mauris. Nec tincidunt praesent semper feugiat. Sed lectus vestibulum mattis ullamcorper.
+        </p>
+    </div>
+    <div class="site-footer">
+        &copy; 2023 Gamesmiths | Designed by Group 21
+  </div>
 </body>
-
 </html>
