@@ -6,7 +6,7 @@ body {
 }
 
 
-p.text {
+p.text,.card-text {
  color: #a5a7a3 ;
 
 }
@@ -16,11 +16,54 @@ h1,h2,h5 {
     padding-top: 10px;
     color: #1E1E1E;
     stroke: #1E1E1E;
+   
+}
+
+.container2{
+    display: flex;
     
 }
 
+.catt{
+    
+    height: 100px;
+    width: 100px;
+    
+    
+}
+
+a{
+    color: #1E1E1E;
+    
+}
+
+.contain{
+   justify-content: center;
+}
+.card-img-top {
+   height: 200px;
+   width: 200px;
+    padding: 10px;
+    }
+
+    .card-body{
+      padding: 10px;
+    }
+
+    .card{
+        width: 700px;
+        
+            margin: 0 auto; /* Added */
+            float: none; /* Added */
+            margin-bottom: 10px; /* Added */
+    }     
+    
+
+    .link { color: #1E1E1E; } /* CSS link color (red) */
+.link:hover { color: #30a712; } /* CSS link hover (green) */
+
 img.catimg {
-     padding: 10px;
+    padding: 10px;
 
 @import url(https://fonts.googleapis.com/css?family=Poppins);
 * {

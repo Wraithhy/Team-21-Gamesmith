@@ -8,7 +8,7 @@
     <style>
 
   </style>
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/homepage_style.css') }}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
 </head>
 <body>
@@ -27,19 +27,51 @@
     </div>
 </div>
 
-<div class="container">
+<div class="contain">
+<div class="container ">
     <div class="text-center">
         <h2 class="text">Our Product Line!</h2>
         <p class="text"> Discover elite gaming gear in our curated categories!</p>
-        <img class="catimg" src="/images/m1.png" class="rounded" alt="..." height="100">
-        <img class="catimg"src="/images/m1.png" class="rounded" alt="..." height="100">
-        <img class="catimg"src="/images/m1.png" class="rounded" alt="..." height="100">
-        <img class="catimg"src="/images/m1.png" class="rounded" alt="..." height="100">
-        <img class="catimg"src="/images/m1.png" class="rounded" alt="..." height="100">
-
-    </div>
+        <div class='container2'>
+        <div class="card mx-auto " style="width: 10rem;">
+          <img src="images/m1.png" class="card-img-top div.embed-responsive" alt="..." >
+          <div class="card-body">
+          <a href="/products#MonitorJump" class="link">Monitors</a>
+            
+          </div>
+        </div>
+        <div class="card mx-auto" style="width: 10rem;">
+          <img  src="images/DeathV2.png" class="card-img-top div.embed-responsive" alt="..." >
+          <div class="card-body">
+          <a href="/products#MouseJump" class="link">Mouse</a>
+            
+          </div>
+        </div>
+        <div class="card mx-auto" style="width: 10rem;">
+          <img src="images/ps5.jpg" class="card-img-top div.embed-responsive" alt="..."  >
+          <div class="card-body">
+          <a href="/products#ControllerJump" class="link">Controllers</a>
+            
+          </div>
+        </div>
+        <div class="card  mx-auto" style="width: 10rem;">
+          <img src="images/RHGK.jpg" class="card-img-top div.embed-responsive" alt="..."  >
+          <div class="card-body">
+          <a href="/products#KeyboardsJump" class="link">Keyboards</a>
+            
+          </div>
+        </div>
+        <div class="card  mx-auto" style="width: 10rem;">
+          <img src="images/RKG.jpg" class="card-img-top div.embed-responsive" alt="..."  >
+          <div class="card-body">
+          <a href="/products#HeadsetJump" class="link">Headsets</a>
+            
+          </div>
+        </div>
+        </div>
+  </div>
 </div>
-
+</div>
 <dic class="container">
     <div class="text-center">
         <h2>Featured Gems</h2>
@@ -64,14 +96,14 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/images/m1.png" class="d-block w-100" alt="..." height="600">
+      <img src="/images/LMGK.jpg" class="d-block w-100" alt="..." height="600">
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p class="text">Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/images/m1.png" class="d-block w-100" alt="..." height="600">
+      <img src="/images/PS4.jpg" class="d-block w-100" alt="..." height="600">
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
         <p class="text">Some representative placeholder content for the third slide.</p>
