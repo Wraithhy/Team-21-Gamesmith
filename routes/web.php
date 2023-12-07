@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactUsController;
 
+use App\Http\Controllers\AboutUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +15,13 @@ use App\Http\Controllers\ContactUsController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
     return view('hello');
 });
 
 Route::get('/', function () {
     return view('welcome');
+    return view('homepage');
 });
 
 Route::middleware([
@@ -38,3 +39,4 @@ Route::middleware([
 Route::get('/contactus', [ContactUsController::class, 'index']);
 
 
+Route::get('/about-us', [AboutUsController::class, 'index']);
