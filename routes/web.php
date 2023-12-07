@@ -17,13 +17,7 @@ use App\Http\Controllers\Auth\RegisterLoginController;
 |
 */
 Route::get('/', function () {
-    return view('hello');
-});
-
-Route::get('/', function () {
-
     return view('homepage');
-
 });
 
 Route::get('/products', function () {
