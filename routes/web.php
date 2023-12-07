@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactUsController;
+
 use App\Http\Controllers\AboutUsController;
 
 /*
@@ -14,6 +16,11 @@ use App\Http\Controllers\AboutUsController;
 |
 */
 Route::get('/', function () {
+    return view('hello');
+});
+
+Route::get('/', function () {
+    return view('welcome');
     return view('homepage');
 });
 
@@ -26,5 +33,10 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+
+Route::get('/contactus', [ContactUsController::class, 'index']);
+
 
 Route::get('/about-us', [AboutUsController::class, 'index']);

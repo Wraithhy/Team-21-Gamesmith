@@ -7,8 +7,10 @@
     <style>
       body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    font-family: 'Roboto', sans-serif;
 }
+
 .navbar {
     background-color: #1E1E1E;
     padding: 15px 0;
@@ -98,7 +100,7 @@
                 <a class="nav-link" href="about-us">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="contactus">Contact Us</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Checkout</a>
