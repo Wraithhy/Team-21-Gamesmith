@@ -30,3 +30,7 @@ Route::middleware([
 Route::get('/checkout', function () {
     return view('checkout-page');
 });
+=======
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
