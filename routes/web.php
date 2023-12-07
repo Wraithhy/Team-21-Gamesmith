@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactUsController;
 
+use App\Http\Controllers\AboutUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,14 +15,23 @@ use App\Http\Controllers\ContactUsController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
     return view('hello');
 });
 
 Route::get('/', function () {
-    return view('welcome');
+
+    return view('homepage');
+
 });
+
+Route::get('/products', function () {
+
+    return view('products');
+
+});
+
+
 
 Route::middleware([
     'auth:sanctum',
@@ -38,3 +48,10 @@ Route::middleware([
 Route::get('/contactus', [ContactUsController::class, 'index']);
 
 
+Route::get('/about-us', [AboutUsController::class, 'index']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/checkout', function () {
+    return view('checkout-page');
+});

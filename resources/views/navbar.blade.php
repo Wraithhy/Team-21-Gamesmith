@@ -15,7 +15,6 @@
     padding: 15px 0;
     margin: 10px;
     border-bottom: 2px solid #333;
-    border-radius: 10px; 
 }
 .container {
     display: flex;
@@ -102,7 +101,7 @@
                 <a class="nav-link" href="about-us">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="contactus">Contact Us</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="checkout">Checkout</a>
