@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" href= "https://fonts.googleapis.com/css?family=Bebas+Neue">
     <title>Gamesmith</title>
     <style>
-      body {
-    margin: 0;
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    font-family: 'Roboto', sans-serif;
-}
-
+    * {
+    
+    font-family: 'Bebas Neue', sans-serif>;
+    }
 .navbar {
     background-color: #1E1E1E;
     padding: 15px 0;
+    margin: 10px;
     border-bottom: 2px solid #333;
 }
-
 .container {
-    
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center:
 }
-
 .navbar-brand {
     color: #fff;
     text-decoration: none;
@@ -34,18 +33,14 @@
     padding: 0;
     display: flex;
 }
-
 .nav-item {
     margin-right: 20px;
 }
-
 .nav-link {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
 }
-
-
 .nav-link:hover {
     text-decoration: underline;
     color: #98D831; 
@@ -78,11 +73,9 @@
         margin: 0;
         padding: 15px;
     }
-
     .menu-btn {
         display: flex;
     }
-
     .nav.expanded {
         display: flex;
     }
@@ -90,7 +83,6 @@
     </style>
 </head>
 <body>
-
 <nav class="navbar">
     <div class="container">
         <a href="/">
@@ -112,11 +104,7 @@
                 <a class="nav-link" href="contactus">Contact Us</a>
             </li>
             <li class="nav-item">
-                <!-- <a class="nav-link" href="#">Checkout</a>  -->
-                <!-- <a class="nav-link" href="#">Contact Us</a> -->
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/checkout">Checkout</a>
+                <a class="nav-link" href="checkout">Checkout</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/login">Log In</a>
@@ -127,6 +115,8 @@
         </ul>
     </div>
 </nav>
+
+</body>
 
 <script>
     function toggleNav() {
@@ -141,5 +131,4 @@
     });
 </script>
 
-</body>
 </html>

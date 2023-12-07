@@ -1,88 +1,22 @@
+@include ('navbar')
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset = "utf-8" />
         <title>Contact Us</title>
         <meta name="viewport" content="width=device-width inital-scale-1.0" />
-        <link rel="stylesheet" type="text/css" href="test.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/contact.css" />
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
 
-        <style> 
-          * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          }
-
-          body {
-              background-color: #1e1e1e;
-              color: #F0F2EF;
-              font-family: 'Roboto Condensed', sans-serif;
-              margin: 0;
-          }
-
-          .container {
-              width: 100%;
-              padding: 20px;
-              box-sizing: border-box;
-          }
-
-          h1 {
-              text-align: center;
-              margin-bottom: 20px;
-              color: #f0f2ef;
-          }
-
-          form {
-              width: 90%;
-              max-width: 500px;
-              margin: 0 auto;
-              padding: 20px;
-              background-color: #98D831;
-              color: #F0F2EF;
-              border-radius: 8px;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          }
-
-          label {
-              margin-bottom: 5px;
-              display: block;
-          }
-
-
-          textarea, input[type="text"], input[type="email"], input[type="tel"] {
-              width: 100%;
-              padding: 10px;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-              margin-bottom: 10px;
-          }
-
-          input[type="submit"] {
-              width: 100%;
-              padding: 10px;
-              border: none;
-              border-radius: 4px;
-              background-color: #401fff;
-              color: #fff;
-              cursor: pointer;
-              transition: background-color 0.3s ease;
-          }
-
-          input[type="submit"]:hover {
-              background-color: #007bff;
-          }
         
-        </style>
-
-        @include ('navbar')
-
+        
     </head>
-
+    
     <body>
-        
-        <div class="container">
             <h1>Contact Us</h1>
+        <div class="container">
+            
             <form action="mailto:gamesmith-ecommerce@gmail.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
               <label for="first_name">First Name: </label>
               <input type ="text" id="first_name" name="first_name" required><br><br>
