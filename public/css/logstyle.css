@@ -11,7 +11,7 @@
 body {
     background: #1e1e1e;
 }
-.containera {
+.logcontainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,7 +50,7 @@ body {
     border: 1px solid #ccc;
     outline: none;
 }
-.btn {
+.logbtn {
     height: 35px;
     background: #98d831;
     border: 0;
@@ -62,7 +62,7 @@ body {
     margin-top: 10px;
     padding: 0px 10px;
 }
-.btn:hover {
+.logbtn:hover {
     opacity: 0.5;
 }
 .submit {
@@ -75,7 +75,7 @@ body {
 /*** Customer Home CSS ***/
 
 /** Nav TBC **/
-.nav {
+.CHnav {
     background: #98d831;
     display: flex;
     flex-direction: row;

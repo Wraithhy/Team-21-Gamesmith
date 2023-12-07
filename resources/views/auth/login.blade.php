@@ -9,7 +9,7 @@
         <title>GameSmith - Login</title>
     </head>
     <body>
-        <div class="containera">
+        <div class="logcontainer">
             <div class="box form-box">
                 <header>GameSmith Login</header>
                 <form action="" method="post">
@@ -34,7 +34,7 @@
                     <div class="field">
                         <input
                             type="submit"
-                            class="btn"
+                            class="logbtn"
                             name="submit"
                             value="Login"
                             required
