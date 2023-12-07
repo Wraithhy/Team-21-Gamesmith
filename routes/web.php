@@ -20,9 +20,18 @@ Route::get('/', function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
+
     return view('homepage');
+
 });
+
+Route::get('/products', function () {
+
+    return view('products');
+
+});
+
+
 
 Route::middleware([
     'auth:sanctum',
@@ -43,3 +52,6 @@ Route::get('/about-us', [AboutUsController::class, 'index']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/checkout', function () {
+    return view('checkout-page');
+});

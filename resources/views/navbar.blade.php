@@ -15,13 +15,14 @@
     background-color: #1E1E1E;
     padding: 15px 0;
     border-bottom: 2px solid #333;
-    border-radius: 10px; 
 }
+
 .container {
-    display: flex;
+    
     justify-content: space-between;
     align-items: center;
 }
+
 .navbar-brand {
     color: #fff;
     text-decoration: none;
@@ -33,14 +34,18 @@
     padding: 0;
     display: flex;
 }
+
 .nav-item {
     margin-right: 20px;
 }
+
 .nav-link {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
 }
+
+
 .nav-link:hover {
     text-decoration: underline;
     color: #98D831; 
@@ -73,9 +78,11 @@
         margin: 0;
         padding: 15px;
     }
+
     .menu-btn {
         display: flex;
     }
+
     .nav.expanded {
         display: flex;
     }
@@ -86,7 +93,9 @@
 
 <nav class="navbar">
     <div class="container">
-    <img src="/images/11.png" alt="Flowers" style="width:auto;" height="45px">
+        <a href="/">
+            <img src="/images/11.png" alt="Flowers" style="width:auto;" height="45px">
+        </a>
         <div class="menu-btn" onclick="toggleNav()">
             <div></div>
             <div></div>
@@ -94,7 +103,7 @@
         </div>
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="about-us">About Us</a>
@@ -103,7 +112,11 @@
                 <a class="nav-link" href="contactus">Contact Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Checkout</a>
+                <!-- <a class="nav-link" href="#">Checkout</a>  -->
+                <!-- <a class="nav-link" href="#">Contact Us</a> -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/checkout">Checkout</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Log In</a>
