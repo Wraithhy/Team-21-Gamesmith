@@ -45,9 +45,9 @@
         <div class="footer-area">
             <h4 class="footer-heading">GameSmith</h4>
             <h4 class="footer-heading">Quick Links</h4>
-            <a href="#" class="text-white">Home</a>
-            <a href="#" class="text-white">About Us</a>
-            <a href="#" class="text-white">Contact Us</a>
+            <a href="/ " class="text-white">Home</a>
+            <a href="about-us" class="text-white">About Us</a>
+            <a href="contactus" class="text-white">Contact Us</a>
             <a href="#" class="text-white">Cart</a>
             <h4 class="footer-heading">Reach Us</h4>
             <div class="footer-phone">07785905071</div>

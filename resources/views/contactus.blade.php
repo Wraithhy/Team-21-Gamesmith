@@ -83,18 +83,18 @@
         
         <div class="container">
             <h1>Contact Us</h1>
-            <form action="test.php" method="post" enctype="text/plain">
-              <label for="first_name">First Name:</label>
+            <form action="mailto:gamesmith-ecommerce@gmail.com" method="post" enctype="text/plain">
+              <label for="first_name">First Name: </label>
               <input type ="text" id="first_name" name="first_name" required><br><br>
-              <label for="last_name">Last Name:</label>
+              <label for="last_name">Last Name: </label>
               <input type ="text" id="last_name" name="last_name" required><br><br>
-              <label for="contact_number">Contact Number:</label>
+              <label for="contact_number">Contact Number: </label>
               <input type ="tel" id="contact_number" name="contact_number" required><br><br>
-              <label for="email">Email Address:</label>
+              <label for="email">Email Address: </label>
               <input type ="email" id="email" name="email" required><br><br>
-              <label for="confirm_email">Confirm Email Address:</label>
+              <label for="confirm_email">Confirm Email Address: </label>
               <input type ="email" id="confirm_email" name="confirm_email" required><br><br>
-              <label for="message">Message:</label>
+              <label for="message">Message: </label>
               <textarea id="message" name="message" rows="5" cols="40" required></textarea><br><br>
 
               <input type="submit" value="Submit">
@@ -102,25 +102,7 @@
             </form>
           </div>
 
-          <?php
-
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $first_name = $_POST['first_name'];
-                $last_name = $_POST['last_name'];
-                $contact_number = $_POST['contact_number'];
-                $email = $_POST['email'];
-
-                $to = "nayimburner12@gmail.com";
-                $subject = "Customer Information";
-                $message = "Customer Information: " . $first_name . "\n" . $last_name . "\n" . $contact_number . "\n" . $email;
-
-                mail($to, $subject, $message);
-
-                header("Location: confirmation_page.html");
-                exit();
-            }
-
-          ?>
+          
 
         <footer>
             @include('footer')
