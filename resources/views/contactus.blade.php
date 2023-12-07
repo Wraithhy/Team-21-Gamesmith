@@ -83,7 +83,7 @@
         
         <div class="container">
             <h1>Contact Us</h1>
-            <form action="mailto:gamesmith-ecommerce@gmail.com" method="post" enctype="text/plain">
+            <form action="mailto:gamesmith-ecommerce@gmail.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
               <label for="first_name">First Name: </label>
               <input type ="text" id="first_name" name="first_name" required><br><br>
               <label for="last_name">Last Name: </label>
@@ -129,6 +129,15 @@
 
         })
       })
+
+      function validateForm() {
+        var project = document.forms[0]["first_name"].value;
+        var date = document.forms[0]["last_name"].value;
+        var duration = document.forms[0]["contact_number"].value;
+        var email = document.forms[0]["email"].value;
+        var confirmEmail = document.forms[0]["confirm_email"].value;
+        var contactMethod = document.forms[0]["message"].value;
+      }
 
       
 
