@@ -40,3 +40,6 @@ Route::get('/contactus', [ContactUsController::class, 'index']);
 
 
 Route::get('/about-us', [AboutUsController::class, 'index']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
