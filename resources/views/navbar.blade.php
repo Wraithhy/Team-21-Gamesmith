@@ -119,10 +119,10 @@
                 <a class="nav-link" href="/checkout">Checkout</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Log In</a>
+                <a class="nav-link" href="/login">Log In</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sign Up</a>
+                <a class="nav-link" href="/register">Sign Up</a>
             </li>
         </ul>
     </div>

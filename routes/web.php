@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactUsController;
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\Auth\RegisterLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,4 +55,12 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/checkout', function () {
     return view('checkout-page');
+});
+Route::controller(RegisterLoginController::class)->group(function() {
+    Route::get('/register', 'register')->name('register');
+    Route::post('/store', 'store')->name('store');
+    Route::get('/login', 'login')->name('login');
+    Route::post('/authenticate', 'authenticate')->name('authenticate');
+    Route::get('/dashboard', 'dashboard')->name('dashboard');
+    Route::post('/logout', 'logout')->name('logout');
 });
