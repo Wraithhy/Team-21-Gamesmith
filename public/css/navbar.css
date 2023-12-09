@@ -6,17 +6,15 @@ body {
 .navbar {
     background-color: #1E1E1E;
     padding: 15px 0;
-    margin: 10px;
     border-bottom: 2px solid #333;
-    border-radius: 10px; 
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
+    
     justify-content: space-between;
     align-items: center;
 }
+
 
 .navbar-brand {
     color: #fff;
@@ -44,7 +42,7 @@ body {
 
 .nav-link:hover {
     text-decoration: underline;
-    color: #98D831; 
+    color: #395213; 
 }
 
 .menu-btn {
