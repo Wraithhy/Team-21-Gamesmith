@@ -43,7 +43,7 @@
                     </div>
                     <div class="link">
                         Don't have account?
-                        <a href="register.html"> Register Now </a>
+                        <a href="{{ route('register') }}"> Register Now </a>
                     </div>
                 </form>
             </div>
