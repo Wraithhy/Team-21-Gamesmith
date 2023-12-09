@@ -12,7 +12,8 @@
         <div class="logcontainer">
             <div class="box form-box">
                 <header>GameSmith Login</header>
-                <form action="" method="post">
+                <form action="{{ route('login') }}" method="post">
+                    @csrf
                     <div class="field input">
                         <label for="username"> Username </label>
                         <input
@@ -42,7 +43,7 @@
                     </div>
                     <div class="link">
                         Don't have account?
-                        <a href="register.html"> Register Now </a>
+                        <a href="{{ route('register') }}"> Register Now </a>
                     </div>
                 </form>
             </div>
