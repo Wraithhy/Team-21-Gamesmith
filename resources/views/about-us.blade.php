@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <title>About Us</title>
         <link rel="stylesheet" href="css/aboutUs.css">
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
     </head>
     <body>
         <div class="aboutuscontainer">
