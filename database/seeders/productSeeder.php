@@ -15,7 +15,7 @@ class productSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('products')->insert([
+        DB::table('productsz')->insert([
             [ 'name' => 'SteelSeries Arctis 7X Wireless Gaming Headset',
             'price'=>'149.99',
             'description'=>"The SteelSeries Arctis 7X Wireless Gaming Headset is your gateway to a world of immersive gaming. Designed for Xbox and PC gaming, this headset offers lossless 2.4 GHz wireless audio for lag-free performance. With its signature ClearCast noise-canceling microphone and powerful 40mm drivers, you'll experience incredible sound and crystal-clear communication. The Arctis 7X is renowned for its comfort, thanks to the AirWeave ear cushions and a suspension headband that ensures a perfect fit. Get ready to elevate your gaming with the SteelSeries Arctis 7X.",
