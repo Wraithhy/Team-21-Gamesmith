@@ -1,13 +1,18 @@
-@include('auth.layouts')
+@extends('auth.layouts')
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>About Us</title>
-        <link rel="stylesheet" href="css/aboutUs.css">
         <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
-    </head>
+    </head>-->
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+
+
+@section('content')
+<link rel="stylesheet" href="css/aboutUs.css">
+
     <body>
         <div class="aboutuscontainer">
             <h1 class="aboutusheadingt">About Us</h1>
@@ -34,4 +39,5 @@
             &copy; 2023 Gamesmiths | Designed by Group 21
         </div>
     </body>
-    </html>
+
+@endsection

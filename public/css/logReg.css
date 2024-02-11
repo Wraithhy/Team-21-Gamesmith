@@ -1,0 +1,66 @@
+body{
+    background-color: black;
+    
+}
+
+.btn{
+
+    background-color: black;
+}
+
+.containerLogin{
+    padding: 50px;
+}
+
+.contact-us{
+    border: 10px solid #000000;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-left{
+    flex-basis: 70%; 
+    padding: 40px 60px;
+    margin: auto;
+}
+
+.contact-right{
+    flex-basis: 20%; 
+    padding: 40px ;
+    background: #98D831;
+}
+
+.contact-right a{
+    text-decoration: none;
+    color: black;
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+.containerLogin p{
+    margin-bottom: 40px;
+}
+
+.contact-left h3{
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.contact-right h3{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+
+
+tr td:first-child{
+    padding-right: 20px;
+}
+
+tr td{
+    padding-top: 20px;
+}
