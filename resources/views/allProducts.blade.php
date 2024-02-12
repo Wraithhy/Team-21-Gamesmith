@@ -1,4 +1,6 @@
 @extends("auth.layouts")
+<link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+
 @section("content")
 <body>
   <link rel="stylesheet" href="css/allProducts.css">

@@ -28,6 +28,9 @@
                         <a class="nav-link" href="checkout">checkout</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="allproducts">Products</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {{ (request()->is('login')) ? 'active' : '' }}" href="{{ route('login') }}">Login</a>
                     </li>
 
