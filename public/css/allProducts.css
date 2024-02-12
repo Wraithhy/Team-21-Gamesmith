@@ -1,0 +1,36 @@
+body{
+  background-color: #4a5859;
+  color: aliceblue;
+}
+
+.title{
+    text-align: center;
+  }
+
+.container_grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 50px; 
+}
+
+.item{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.products{
+      display: flex;
+      justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+        padding: 10px; 
+        text-align: center;
+}
+
+.productSlider{
+      display: block;
+      max-width: 100%;
+        height: auto;
+        width: 200px;
+}

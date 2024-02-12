@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('productsz', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string("name");
             $table->string("price");
-            $table->string("category");
+            $table->enum('Category', ['Headset', 'Keyboards', 'Controllers', 'Mice', 'Monitors']);
             $table->longText("description");
             $table->string("gallery");
             $table->timestamps();

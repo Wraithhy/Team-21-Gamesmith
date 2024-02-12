@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactUsController;
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\allProductsController;
+
 use App\Http\Controllers\Auth\LoginRegisterController;
 
 /*
@@ -57,3 +59,5 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', 'logout')->name('logout');
 });
+Route::get("allproducts",[allProductsController::class,'index']);
+
