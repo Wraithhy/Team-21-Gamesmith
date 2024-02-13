@@ -10,15 +10,19 @@
   </style>
   <link rel="stylesheet" href="{{ asset('css/homepage_style.css') }}">
 </head>-->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
 
 @extends('auth.layouts')
 
 
 @section('content')
+<head>
+        <meta charset = "utf-8" />
+        <title>Contact Us</title>
+        <meta name="viewport" content="width=device-width inital-scale-1.0" />
+        <link rel="stylesheet" href="css/homepage_style.css">
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+</head>
 <body>
-  <link rel="stylesheet" href="css/homepage_style.css">
-
 <div class="container" >
     <div class="text-center">
         <h1 class="mh"> Welcome To Gamesmith</h>

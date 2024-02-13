@@ -37,10 +37,13 @@
                     <li class="nav-item">
                         <a class="nav-link {{ (request()->is('register')) ? 'active' : '' }}" href="{{ route('register') }}">Register</a>
                     </li>
-                @else    
+                @else
+                
                 <a class="nav-link {{ (request()->is('register')) ? 'active' : '' }}" href="about-us">about us</a>
                 <a class="nav-link {{ (request()->is('register')) ? 'active' : '' }}" href="contactus">contact us</a>
                 <a class="nav-link {{ (request()->is('register')) ? 'active' : '' }}" href="checkout">checkout</a>
+                <a class="nav-link {{ (request()->is('register')) ? 'active' : '' }}" href="allproducts">Products</a>
+
 
                     <li class="">
                         <a class="nav-link">

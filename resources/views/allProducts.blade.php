@@ -1,9 +1,14 @@
 @extends("auth.layouts")
-<link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
-
 @section("content")
+<head>
+        <meta charset = "utf-8" />
+        <title>Contact Us</title>
+        <meta name="viewport" content="width=device-width inital-scale-1.0" />
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+        <link rel="stylesheet" href="css/allProducts.css">
+
+</head>
 <body>
-  <link rel="stylesheet" href="css/allProducts.css">
   <div class="title">
     <h1>Products</h1>
   </div>

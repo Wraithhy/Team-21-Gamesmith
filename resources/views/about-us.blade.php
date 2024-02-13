@@ -7,11 +7,16 @@
         <title>About Us</title>
         <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
     </head>-->
-    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
 
 
 @section('content')
-<link rel="stylesheet" href="css/aboutUs.css">
+<head>
+        <meta charset = "utf-8" />
+        <title>Contact Us</title>
+        <meta name="viewport" content="width=device-width inital-scale-1.0" />
+        <link rel="stylesheet" href="css/aboutUs.css">
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+</head>
 
     <body>
         <div class="aboutuscontainer">

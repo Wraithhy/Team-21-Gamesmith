@@ -1,7 +1,5 @@
-@include ('auth.layouts')
-
-<!DOCTYPE html>
-<html>
+@extends ('auth.layouts')
+@section('content')
     <head>
         <meta charset = "utf-8" />
         <title>Contact Us</title>
@@ -77,3 +75,4 @@
 
     </script>
 </html>
+@endsection

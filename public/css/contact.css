@@ -1,6 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
+
     box-sizing: border-box;
     font-family: "Bebas Neue", sans-serif;
     }
@@ -14,7 +13,6 @@
 
     .container {
         width: 100%;
-        padding: 20px;
         box-sizing: border-box;
     }
 

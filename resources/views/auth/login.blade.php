@@ -1,5 +1,8 @@
 @extends('auth.layouts')
 @section('content')
+<head>
+<link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+</head>
     <link rel="stylesheet" href="css/logReg.css">
     <div class="containerLogin">
         <div class="contact-us"> 

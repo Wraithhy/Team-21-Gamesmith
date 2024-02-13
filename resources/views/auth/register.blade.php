@@ -53,6 +53,9 @@
     
 
 @section('content')
+<head>
+<link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+</head>
 <body>
     <link rel="stylesheet" href="css/logReg.css">
     <div class="containerLogin">

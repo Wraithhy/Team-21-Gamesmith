@@ -7,6 +7,8 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\allProductsController;
 
 use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\homepageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +20,13 @@ use App\Http\Controllers\Auth\LoginRegisterController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
-    return view('homepage');
-});
+//Route::get('/', function () {
+  //  return view('homepage');
+//});
+
+
+Route::get('/', [homepageController::class, 'index']);
+
 
 Route::get('/products', function () {
 
