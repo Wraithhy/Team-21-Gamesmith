@@ -36,7 +36,8 @@
                         <input type="submit" class="logbtn" value="Login">
                        
                 </form>
-
+                </div>
+                <div class="logbutton-container">
                 <a href= "register"> <button class="regbtn">Register</button> </a>
 </div>
             </div>
