@@ -45,7 +45,8 @@
             </div>
             
             <div class="contact-right">
-                <h3>Having issues?</h3>
+                <h3>Log in</h3>
+                <h4>Having issues? </h4>
                 <h4>Get in Touch: </h4>
 
                 <table>

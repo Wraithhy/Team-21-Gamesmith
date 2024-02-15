@@ -61,11 +61,13 @@
     <div class="containerLogin">
         <div class="contact-us"> 
             <div class="contact-left">
-                <h3>Register with Gamesmith</h3>
             <div class="card-body">
                 <form action="{{ route('store') }}" method="post">
                     @csrf
                     <div class="mb-3 row">
+                    <a href="/" class="LoginIMG">
+                <img class="LoginIMG" src="images/gamesmith.png" alt="GameSmith Logo" />
+            </a>
                         <label for="name" class="col-md-4 col-form-label text-md-end text-start">Name</label>
                         <div class="col-md-6">
                           <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}">
@@ -98,9 +100,9 @@
                           <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
                         </div>
                     </div>
-                    <div class="mb-3 row">
-                        <input type="submit" class="col-md-3 offset-md-5 btn btn-primary" value="Register">
-                    </div>
+                    <div class="logbutton-container">
+                <a href= "register"> <button class="regbtn">Register</button> </a>
+</div>
                     
                 </form>
             </div>
@@ -109,19 +111,17 @@
             </div>
             
             <div class="contact-right">
-                <h3>Reach us </h3>
+                <h3>Account Creation</h3>
+                <h4>Having issues? </h4>
+                <h4>Get in Touch: </h4>
 
                 <table>
                     <tr>
-                        <td>Gamesmith</td>
-                        <td></td>
-
+                        <td>&#128383 Phone:</td>
+                        <td>0800 03 1337</td>
                     </tr>
                     <tr>
-                        <td>Group 21</td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
+                        <td>&#128231 Email:</td>
                         <td><a href="mailto:220160340@aston.ac.uk">220160340@aston.ac.uk</a></td>
                     </tr>
                 </table>
