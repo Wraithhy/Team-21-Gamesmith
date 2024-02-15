@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="{{ asset('css/homepage_style.css') }}">
 </head>-->
 
-@extends('auth.layouts')
+@extends('layouts.app')
 
 
 @section('content')
@@ -43,35 +43,35 @@
         <p class="text"> Discover elite gaming gear in our curated categories!</p>
         <div class='container2'>
         <div class="card mx-auto " style="width: 10rem;">
-          <img src="images/m1.png" class="card-img-top div.embed-responsive" alt="..." >
+          <img src="images/22.png" class="card-img-top div.embed-responsive" alt="..." >
           <div class="card-body">
           <a href="/products#MonitorJump" class="link">Monitors</a>
             
           </div>
         </div>
         <div class="card mx-auto" style="width: 10rem;">
-          <img  src="images/DeathV2.png" class="card-img-top div.embed-responsive" alt="..." >
+          <img  src="images/18.png" class="card-img-top div.embed-responsive" alt="..." >
           <div class="card-body">
           <a href="/products#MouseJump" class="link">Mouse</a>
             
           </div>
         </div>
         <div class="card mx-auto" style="width: 10rem;">
-          <img src="images/ps5.jpg" class="card-img-top div.embed-responsive" alt="..."  >
+          <img src="images/12.png" class="card-img-top div.embed-responsive" alt="..."  >
           <div class="card-body">
           <a href="/products#ControllerJump" class="link">Controllers</a>
             
           </div>
         </div>
         <div class="card  mx-auto" style="width: 10rem;">
-          <img src="images/RHGK.jpg" class="card-img-top div.embed-responsive" alt="..."  >
+          <img src="images/6.png" class="card-img-top div.embed-responsive" alt="..."  >
           <div class="card-body">
           <a href="/products#KeyboardsJump" class="link">Keyboards</a>
             
           </div>
         </div>
         <div class="card  mx-auto" style="width: 10rem;">
-          <img src="images/RKG.jpg" class="card-img-top div.embed-responsive" alt="..."  >
+          <img src="images/1.png" class="card-img-top div.embed-responsive" alt="..."  >
           <div class="card-body">
           <a href="/products#HeadsetJump" class="link">Headsets</a>
             
