@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section("content")
+<body>
+  <link rel="stylesheet" href="css/search.css">
+</body>
 <div class="custom-product">
   <div class="col-sm-4">
   <h4>Result for Products</h4>
@@ -18,19 +21,3 @@
     </div>
   </div>
 @endsection
-
-<style>
-    .searched-item a{
-      color: #98D831;
-      display: flex;
-      gap: 50px;
-      margin: 20px;
-    }
-
-    .trending-wrapper{
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* 5 columns with equal width */
-    }
-
-
-</style>
