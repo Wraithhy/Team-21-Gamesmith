@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>About Us</title>
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+        <link rel="stylesheet" href="css/aboutUs.css">
     </head>
     <body>
         <div class="aboutuscontainer">
@@ -33,7 +35,7 @@
     </html>
 
 
-<style>
+<!--<style>
 
 body {
 font-family: "Bebas Neue", sans-serif;
@@ -111,4 +113,4 @@ font-size: 18px;
 border-radius: 10px;
 text-align: center;
 }
-</style>
+</style>-->
