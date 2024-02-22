@@ -32,12 +32,15 @@ if(Session::has('user'))
         </ul>
 
         <form action="/search" class="navbar-form navbar-left">
-          <div class="form-group">
+    <div class="form-group">
+        <div class="input-group">
             <input type="text" name="query" class="form-control search-box" placeholder="Search">
-          </div>
-          <button type="submit" class="btn btn-default">Search</button>
-
-        </form>
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-default">Search</button>
+            </span>
+        </div>
+    </div>
+</form>
 
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/cartlist">cart({{$total}})</a></li>
