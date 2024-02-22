@@ -117,12 +117,14 @@ class newProductController extends Controller
     
     function myOrders()
     {
-        $userId=Auth::user()->id;
-        $orders= DB::table('orders')
-         ->join('products','orders.product_id','=','products.id')
-         ->where('orders.user_id',$userId)
-         ->get();
- 
-         return view('myorders',['orders'=>$orders]);
+        if(Auth::check()){
+            $userId=Auth::user()->id;
+            $orders= DB::table('orders')
+             ->join('products','orders.product_id','=','products.id')
+             ->where('orders.user_id',$userId)
+             ->get();
+             return view('myorders',['orders'=>$orders]);
+        }
+        return view('auth.login');
     }
 }

@@ -1,4 +1,6 @@
-@include('layouts.app')
+
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +10,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Product</h1>
+    <h1>Welcome</h1>
+    <h1>Products</h1>
     <div>
         @if(session()->has('success'))
             <div>
@@ -53,3 +56,11 @@
     </div>
 </body>
 </html>
+<style>
+    body{
+        background-color: #4A5859;
+        color: white;
+    }
+</style>
+@endsection
+
