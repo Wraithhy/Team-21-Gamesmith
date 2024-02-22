@@ -11,10 +11,20 @@
                     <div class="alert alert-success">
                         {{ $message }}
                     </div>
+                    <div>
+                    <h3><a href="/">
+                        come check out out products
+                    </a></h3>
+                    </div>
                 @else
                     <div class="alert alert-success">
-                        Log in Successful!
-                    </div>       
+                        You are logged in!
+                    </div>    
+                    <div><h4><a href="/">
+                        come check out out products
+                    </a>
+                    </h4>
+                    </div>   
                 @endif                
             </div>
         </div>
