@@ -1,5 +1,6 @@
 .container{
     width: 80%;
+    margin: 50px auto;
 }
 
 .contact-us{
@@ -12,6 +13,7 @@
 .contact-left{
     flex-basis: 50%; /*sets initial length of flex*/
     padding: 40px 60px;
+    color: #000000;
 }
 
 .contact-right{
@@ -71,7 +73,7 @@ label{
 }
 
 button{
-    background: #000000;
+    background: #98D831;
     width: 100px;
     border: none;
     outline: none;
