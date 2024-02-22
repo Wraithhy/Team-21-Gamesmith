@@ -37,3 +37,82 @@
 @endsection
 
 
+<!--<style>
+
+body {
+font-family: "Bebas Neue", sans-serif;
+background-color: #4A5859;
+color: #F0F2EF;
+min-height: 100vh;
+}
+
+.aboutuscontainer,
+.extrastuff {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+background-color: #4A5859;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin-top: 20px;
+}
+
+.aboutusheadingt {
+color: #98d831;
+font-size: 40px;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.content,
+.extrastuff {
+margin-top: 20px;
+}
+
+.story,
+.contact-para,
+.randomthingz {
+margin-bottom: 15px;
+line-height: 1.6;
+font-size: 20px;
+color: #F0F2EF;
+}
+
+.contact-link {
+color: #98D831;
+text-decoration: underline; 
+cursor: pointer;
+}
+
+.ucontainr {
+margin-top: 20px;
+padding: 20px;
+background-color: #1E1E1E;
+border-radius: 10px;
+text-align: center;
+}
+
+.image21 {
+max-width: 100%;
+height: auto;
+border-radius: 10px;
+border: 5px solid #98d831;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.homepage {
+display: block;
+margin: 0 auto;
+text-align: center;
+}
+
+.thefootrr {
+margin-top: auto;
+padding: 20px;
+background-color: black;
+color: #98D831;
+font-size: 18px;
+border-radius: 10px;
+text-align: center;
+}
+</style>-->
