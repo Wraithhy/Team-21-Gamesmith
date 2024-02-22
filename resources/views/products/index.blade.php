@@ -1,6 +1,10 @@
 
 @extends('layouts.app')
 @section('content')
+<?php 
+use App\Http\Controllers\newProductController;
+use Illuminate\Support\Facades\Auth;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +14,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome</h1>
+    <h1>Welcome {{ Auth::user()->name }}</h1>
     <h1>Products</h1>
     <div>
         @if(session()->has('success'))
