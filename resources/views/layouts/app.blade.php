@@ -63,12 +63,15 @@ if(Auth::user())
                             </a>
                         </li>
                         <li>
-                        <form action="/search" class="nav-link">
+                        <form action="/search" class="navbar-form navbar-left">
                             <div class="form-group">
-                                <input type="text" name="query" class="form-control search-box" placeholder="Search">
+                                <div class="input-group">
+                                    <input type="text" name="query" class="form-control search-box" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-default">Search</button>
+                                    </span>
+                                </div>
                             </div>
-                            <button type="submit" class="btn btn-default">Search</button>
-
                         </form>
                         </li>
 
