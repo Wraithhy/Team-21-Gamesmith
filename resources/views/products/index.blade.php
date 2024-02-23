@@ -1,4 +1,10 @@
-@include('layouts.app')
+
+@extends('layouts.app')
+@section('content')
+<?php 
+use App\Http\Controllers\newProductController;
+use Illuminate\Support\Facades\Auth;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,6 +66,11 @@
 </head>
 
 <body>
+<<<<<<< HEAD
+=======
+    <h1>Welcome {{ Auth::user()->name }}</h1>
+    <h1>Products</h1>
+>>>>>>> 15faf4b71eace8937302d8ad1bba354626c9bdf5
     <div>
         @if(session()->has('success'))
             <div>
@@ -103,5 +114,17 @@
         </table>
     </div>
 </body>
+<<<<<<< HEAD
 
 </html>
+=======
+</html>
+<style>
+    body{
+        background-color: #4A5859;
+        color: white;
+    }
+</style>
+@endsection
+
+>>>>>>> 15faf4b71eace8937302d8ad1bba354626c9bdf5
