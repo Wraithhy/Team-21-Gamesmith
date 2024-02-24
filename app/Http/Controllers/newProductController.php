@@ -36,25 +36,34 @@ class newProductController extends Controller
         return view('search',['products'=>$data]);
     }
     
+
     public function addToCart(Request $req)
     {
-        // Check if a user is authenticated
         if (Auth::check()) {
-            // Get the currently authenticated user
             $user = Auth::user();
+            $product_id = $req->product_id;
+            $quantity = $req->quantity;
+
     
-            // Create a new Cart instance and save it to the database
-            $cart = new Cart;
-            $cart->user_id = $user->id;
-            $cart->product_id = $req->product_id;
-            $cart->quantity = 1;
-            $cart->save();
+            $existingCartItem = Cart::where('user_id', $user)
+                ->where('product_id', $product_id)
+                ->first();    
+            if ($existingCartItem) {
+                $existingCartItem->update(['quantity' => $existingCartItem->quantity + $req->quantity]);
+            } else {
+                $cart = new Cart;
+                $cart->user_id = $user->id;
+                $cart->product_id = $req->product_id;
+                $cart->quantity = $req->quantity;
+                $cart->save();
+            }
     
-            return redirect('/');
+            return redirect('/')->with('success', 'Product added to cart.');
         } else {
             return redirect('/login');
         }
     }
+    
     
     static function cartItem()
     {
