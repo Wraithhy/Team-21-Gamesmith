@@ -1,3 +1,11 @@
+body{
+    background-color: #4A5859;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+a {
+    color: #98D831;
+}
 .container{
     width: 80%;
 }
@@ -10,12 +18,12 @@
 }
 
 .contact-left{
-    flex-basis: 50%; /*sets initial length of flex*/
+    flex-basis: 50%; 
     padding: 40px 60px;
 }
 
 .contact-right{
-    flex-basis: 50%; /* sets initial length of flex*/
+    flex-basis: 50%; 
     padding: 40px ;
     background: #98D831;
     color: #fff;
@@ -70,7 +78,7 @@ label{
     color: #000000;
 }
 
-button{
+.submitButton{
     background: #000000;
     width: 100px;
     border: none;
@@ -94,7 +102,7 @@ button{
     margin-bottom: 30px;
 }
 
-a{
+.contact-right a{
     color: #fff;
 }
 

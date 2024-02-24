@@ -25,9 +25,15 @@
 
         
     </body>-->
-    <link rel="stylesheet" href="css/contact2.css">
 
 @section( 'content' )
+<head>
+<link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+
+<link rel="stylesheet" href="css/contact2.css">
+
+</head>
+
 
 <body>
 
@@ -74,7 +80,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" rows="5" placeholder="Your message here"></textarea>
 
-                    <button id="Submit" type="submit">Send</button>
+                    <button class="submitButton" id="Submit" type="submit">Send</button>
                 </form>
             </div>
             

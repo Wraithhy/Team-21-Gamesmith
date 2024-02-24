@@ -1,7 +1,10 @@
 @extends("layouts.app")
+
 @section("content")
+<head>
+    <link rel="stylesheet" href="css/allProducts.css">
+</head>
 <body>
-  <link rel="stylesheet" href="css/allProducts.css">
   <div class="title">
     <h1>Products</h1>
   </div>

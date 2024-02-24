@@ -14,8 +14,7 @@
                     </div>
                     <div class="col-sm-4">
                         <div>
-                            <h2>{{$item->name}}</h2>
-                            <h5>{{$item->description}}</h5>
+                            <h4>{{$item->name}}</h4>
                         </div>
                     </div>
                     <div class="col-sm-3">
