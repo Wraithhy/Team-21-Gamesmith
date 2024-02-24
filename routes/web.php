@@ -31,14 +31,15 @@ Route::group(['middleware' => ['auth','admin']], function () {
 Route::get("/",[newProductController::class,'index']);
 Route::get("detail/{id}",[newProductController::class,'detail']);
 Route::get("search",[newProductController::class,'search']);
-Route::post("add_to_cart",[newProductController::class,'addToCart']);
+//Route::post("add_to_cart",[newProductController::class,'addToCart']);
 Route::get("cartlist",[newProductController::class,'cartList']); 
-Route::get("removecart/{id}",[newProductController::class,'removeCart']); 
+//Route::get("removecart/{id}",[newProductController::class,'removeCart']); 
 Route::get("ordernow",[newProductController::class,'orderNow']); 
 Route::post("orderplace",[newProductController::class,'orderPlace']);
 Route::get("myorders",[newProductController::class,'myOrders']);
 Route::get("allProducts",[allProductsController::class,'index']);
 Route::get('aboutus', [AboutUsController::class, 'index']);
 Route::get('contactus', [ContactUsController::class, 'index']);
-
-
+Route::get('add-to-cart/{id}', [newProductController::class, 'addToCart'])->name('add.to.cart');
+Route::patch('update-cart', [newProductController::class, 'update'])->name('update.cart');
+Route::delete('remove-from-cart', [newProductController::class, 'remove'])->name('remove.from.cart');
