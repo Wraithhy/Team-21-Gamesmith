@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\newProductController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\userController;
 use App\Http\Controllers\allProductsController;
 use App\Http\Controllers\AboutUsController;
 
@@ -22,6 +22,9 @@ Route::group(['middleware' => ['auth','admin']], function () {
    Route::get('/product/{product}/edit', [ProductController::class, 'edit'])->name('product.edit');
    Route::put('/product/{product}/update', [ProductController::class, 'update'])->name('product.update');
    Route::delete('/product/{product}/destroy', [ProductController::class, 'destroy'])->name('product.destroy');
+   Route::get('users', [userController::class, 'index']);
+   Route::get('/users/{users}/edit', [userController::class, 'edit'])->name('user.edit');
+   Route::put('/users/{user}/update',[userController::class, 'update'])->name('user.update');
 });
 
 
@@ -37,4 +40,5 @@ Route::get("myorders",[newProductController::class,'myOrders']);
 Route::get("allProducts",[allProductsController::class,'index']);
 Route::get('aboutus', [AboutUsController::class, 'index']);
 Route::get('contactus', [ContactUsController::class, 'index']);
+
 

@@ -14,63 +14,12 @@ use Illuminate\Support\Facades\Auth;
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product</title>
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #4A5859;
-        }
-
-        h1 {
-            font-size: 40px;
-            text-align: center;
-            color: #98D831;
-            margin: 20px 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th,
-        td {
-            border: 1px solid #F0F2EF;
-            padding: 8px;
-            text-align: left;
-            font-family: 'Bebas Neue', sans-serif;
-        }
-
-        th {
-            background-color: #98D831;
-            color: #4A5859;
-        }
-
-        a {
-            display: block;
-            margin: 0 auto;
-            text-align: center;
-            color: #98D831;
-            text-decoration: underline;
-            cursor: pointer;
-            font-size: 18px; 
-        }
-
-        form {
-            display: inline-block;
-        }
-    </style>
+    <link rel="stylesheet" href="css/admin-index.css">
 </head>
 
 <body>
-<<<<<<< HEAD
-=======
     <h1>Welcome {{ Auth::user()->name }}</h1>
     <h1>Products</h1>
->>>>>>> 15faf4b71eace8937302d8ad1bba354626c9bdf5
     <div>
         @if(session()->has('success'))
             <div>
@@ -78,8 +27,8 @@ use Illuminate\Support\Facades\Auth;
             </div>
         @endif
 
-        <div>
-            <a href="{{ route('product.create') }}" style="font-family: 'Bebas Neue', sans-serif; font-size: 22px;">Create a Product</a>
+        <div class="create">
+            <a href="{{ route('product.create') }}">Create a Product</a>
         </div>
 
         <table>
@@ -114,17 +63,6 @@ use Illuminate\Support\Facades\Auth;
         </table>
     </div>
 </body>
-<<<<<<< HEAD
 
 </html>
-=======
-</html>
-<style>
-    body{
-        background-color: #4A5859;
-        color: white;
-    }
-</style>
 @endsection
-
->>>>>>> 15faf4b71eace8937302d8ad1bba354626c9bdf5
