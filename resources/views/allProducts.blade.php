@@ -1,12 +1,8 @@
-@extends("auth.layouts")
+@extends("layouts.app")
+
 @section("content")
 <head>
-        <meta charset = "utf-8" />
-        <title>Contact Us</title>
-        <meta name="viewport" content="width=device-width inital-scale-1.0" />
-        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
-        <link rel="stylesheet" href="css/allProducts.css">
-
+    <link rel="stylesheet" href="css/allProducts.css">
 </head>
 <body>
   <div class="title">
@@ -15,10 +11,12 @@
     <div class="container_grid">
         @foreach ($products as $item)
             <div class="item {{$item['id']==1?'active':''}}">
-                <img class="productSlider" src="images/newImages/{{$item->id}}.png" alt="images">
+                <a href="detail/{{$item['id']}}">
+                <img class="productSlider" src="images/{{$item->id}}.png" alt="images">
                     <div class="products">
-                        <h4>{{$item['name']}}</h4>
+                        <h3>{{$item['name']}}</h3>
                     </div>
+                </a>
             </div>
         @endforeach
     </div>

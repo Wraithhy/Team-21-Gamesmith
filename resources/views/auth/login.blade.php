@@ -1,14 +1,15 @@
-@extends('auth.layouts')
+@extends('layouts.app')
+
 @section('content')
 <head>
 <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
 </head>
-    <link rel="stylesheet" href="css/logReg.css">
+    <link rel="stylesheet" href="css/logstyle.css">
     <div class="containerLogin">
         <div class="contact-us"> 
             <div class="contact-left">
             <div class="card-body">
-                <form action="{{ route('authenticate') }}" method="post">
+                <form action="{{ route('login') }}" method="post">
                     @csrf
                     <div class="mb-3 row">
 
@@ -45,8 +46,7 @@
             </div>
             
             <div class="contact-right">
-                <h3>Log in</h3>
-                <h4>Having issues? </h4>
+                <h3>Having issues?</h3>
                 <h4>Get in Touch: </h4>
 
                 <table>
@@ -72,7 +72,7 @@
         <div class="card">
             <div class="card-header">Login</div>
             <div class="card-body">
-                <form action="{{ route('authenticate') }}" method="post">
+                <form action="{{ route('login') }}" method="post">
                     @csrf
                     <div class="mb-3 row">
                         <label for="email" class="col-md-4 col-form-label text-md-end text-start">Email Address</label>
