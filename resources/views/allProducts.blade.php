@@ -3,6 +3,8 @@
 @section("content")
 <head>
     <link rel="stylesheet" href="css/allProducts.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+
 </head>
 <body>
   <div class="title">
