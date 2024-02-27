@@ -141,3 +141,7 @@ tr td {
     -moz-box-shadow: none !important;
     box-shadow: none !important;
 }
+
+a{
+    color: #98d831;
+}
