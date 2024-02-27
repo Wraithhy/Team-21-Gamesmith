@@ -1,30 +1,4 @@
 @extends('layouts.app')    
- <!--   <body>
-            <h1 class="contactTitle">Contact Us</h1>
-        <div class="container3">
-            
-            <form class='contactForm' action="mailto:gamesmith-ecommerce@gmail.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
-            @csrf
-              <label for="first_name">First Name: </label>
-              <input type ="text" id="first_name" name="first_name" required><br><br>
-              <label for="last_name">Last Name: </label>
-              <input type ="text" id="last_name" name="last_name" required><br><br>
-              <label for="contact_number">Contact Number: </label>
-              <input type ="tel" id="contact_number" name="contact_number" required><br><br>
-              <label for="email">Email Address: </label>
-              <input type ="email" id="email" name="email" required><br><br>
-              <label for="confirm_email">Confirm Email Address: </label>
-              <input type ="email" id="confirm_email" name="confirm_email" required><br><br>
-              <label for="message">Message: </label>
-              <textarea id="message" name="message" rows="5" cols="40" required></textarea><br><br>
-
-              
-
-            </form>
-          </div>
-
-        
-    </body>-->
 
 @section( 'content' )
 <head>
@@ -36,8 +10,6 @@
 
 
 <body>
-
-
     <div class="container">
         <h1> Connect with us</h1>
         <p>We would love to get to know what you require from us!</p>
@@ -109,3 +81,29 @@
 @endSection
 
 
+ <!--   <body>
+            <h1 class="contactTitle">Contact Us</h1>
+        <div class="container3">
+            
+            <form class='contactForm' action="mailto:gamesmith-ecommerce@gmail.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
+            @csrf
+              <label for="first_name">First Name: </label>
+              <input type ="text" id="first_name" name="first_name" required><br><br>
+              <label for="last_name">Last Name: </label>
+              <input type ="text" id="last_name" name="last_name" required><br><br>
+              <label for="contact_number">Contact Number: </label>
+              <input type ="tel" id="contact_number" name="contact_number" required><br><br>
+              <label for="email">Email Address: </label>
+              <input type ="email" id="email" name="email" required><br><br>
+              <label for="confirm_email">Confirm Email Address: </label>
+              <input type ="email" id="confirm_email" name="confirm_email" required><br><br>
+              <label for="message">Message: </label>
+              <textarea id="message" name="message" rows="5" cols="40" required></textarea><br><br>
+
+              
+
+            </form>
+          </div>
+
+        
+    </body>-->

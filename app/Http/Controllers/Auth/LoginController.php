@@ -22,6 +22,9 @@ class LoginController extends Controller
         if ($user->is_admin == 1) {
             return redirect()->route('product.index');
         }
+        else{
+            return redirect()->route('homepage');
+        }
 
         return redirect()->intended($this->redirectPath());
     }

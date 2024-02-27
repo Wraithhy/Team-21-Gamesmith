@@ -32,7 +32,7 @@ Route::group(['middleware' => ['auth','admin']], function () {
 });
 
 
-Route::get("/",[newProductController::class,'index']);
+Route::get("/",[newProductController::class,'index'])->name('homepage');
 Route::get("detail/{id}",[newProductController::class,'detail']);
 Route::get("search",[newProductController::class,'search']);
 //Route::post("add_to_cart",[newProductController::class,'addToCart']);

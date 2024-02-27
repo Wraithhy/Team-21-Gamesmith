@@ -6,7 +6,7 @@ body{
 a {
     color: #98D831;
 }
-.container{
+.containering{
     width: 80%;
 }
 
@@ -33,7 +33,7 @@ h1{
     margin-bottom: 10px;
 }
 
-.container p{
+.containering p{
     margin-bottom: 40px;
 }
 
