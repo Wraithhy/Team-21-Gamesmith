@@ -151,8 +151,7 @@
         </tr>
         <tr>
             <td colspan="5" class="text-right">
-                <a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a>
-                <button class="btn btn-success">Checkout</button>
+                <a href="ordernow" class="btn btn-warning"><i class="fa fa-angle-left"></i>Checkout </a>
             </td>
         </tr>
     </tfoot>
@@ -177,6 +176,26 @@
                window.location.reload();
             }
         });
+    });
+
+    $(".remove-from-cart").click(function (e) {
+        e.preventDefault();
+  
+        var ele = $(this);
+  
+        if(confirm("Are you sure want to remove?")) {
+            $.ajax({
+                url: '{{ route('remove.from.cart') }}',
+                method: "DELETE",
+                data: {
+                    _token: '{{ csrf_token() }}', 
+                    id: ele.parents("tr").attr("data-id")
+                },
+                success: function (response) {
+                    window.location.reload();
+                }
+            });
+        }
     });
 
   
