@@ -105,12 +105,12 @@ h1 {
 
 .contact-left h3 {
     color: #000000;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 30px;
 }
 
 .contact-right h3 {
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 30px;
 }
 
@@ -140,8 +140,4 @@ tr td {
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;
-}
-
-a{
-    color: #98d831;
 }
