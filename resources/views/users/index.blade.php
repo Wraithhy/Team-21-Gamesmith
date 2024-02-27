@@ -11,7 +11,7 @@
     <h1>Users</h1>
     <div>
         <div class="create">
-            <a href="user.create">Create a Product</a>
+            <a href="/users/create">Create a User</a>
         </div>
 
         <table>
@@ -26,10 +26,10 @@
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>
-                        <a href="{{ route('user.edit', ['users' => $user]) }}">Edit</a>
+                        <a href="{{ route('users.edit', $user->id) }}">Edit</a>
                     </td>
                     <td>
-                        <form method="post" action="#">
+                        <form method="post" action="{{ route('users.destroy', $user->id) }}">
                             @csrf 
                             @method('delete')
                             <input type="submit" value="Delete" />

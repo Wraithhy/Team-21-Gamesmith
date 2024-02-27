@@ -22,9 +22,13 @@ Route::group(['middleware' => ['auth','admin']], function () {
    Route::get('/product/{product}/edit', [ProductController::class, 'edit'])->name('product.edit');
    Route::put('/product/{product}/update', [ProductController::class, 'update'])->name('product.update');
    Route::delete('/product/{product}/destroy', [ProductController::class, 'destroy'])->name('product.destroy');
-   Route::get('users', [userController::class, 'index']);
-   Route::get('/users/{users}/edit', [userController::class, 'edit'])->name('user.edit');
-   Route::put('/users/{user}/update',[userController::class, 'update'])->name('user.update');
+   Route::get('/userPage', userController::class .'@index')->name('users.index');
+   Route::get('/users/create', userController::class . '@create')->name('users.create');
+   Route::post('/users', userController::class .'@store')->name('users.store');
+   Route::get('/users/{user}', userController::class .'@show')->name('users.show');
+   Route::get('/users/{user}/edit', userController::class .'@edit')->name('users.edit');
+   Route::put('/users/{user}', userController::class .'@update')->name('users.update');
+   Route::delete('/users/{user}', userController::class .'@destroy')->name('users.destroy');
 });
 
 

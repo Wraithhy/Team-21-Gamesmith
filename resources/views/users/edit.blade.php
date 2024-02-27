@@ -1,41 +1,48 @@
 @extends('layouts.app')
-@section('content')
-<!DOCTYPE html>
-<html lang="en">
+@section("content")
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+<link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+
 </head>
-<body>
-    <h1>Edit a user</h1>
-    <div>
-        @if($errors->any())
-        <ul>
-            @foreach($errors->all() as $error)
-                <li>{{$error}}</li>
-            @endforeach
-        </ul>
+<div class="container h-100 mt-5">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-10 col-md-8 col-lg-6">
+            <h3>Update User</h3>
+            <form action="{{ route('users.update', $users->id) }}" method="post">
+                @csrf
+                @method('PUT')
 
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" value="{{ $users->name }}" required>
+                </div>
 
-        @endif
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" value="{{ $users->email }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+
+                <button type="submit" class="btn mt-3 btn-primary">Update User</button>
+            </form>
+        </div>
     </div>
-    <form method="post">
-        @csrf 
-        @method('put')
-        <div>
-            <label>Name</label>
-            <input type="text" name="name" placeholder="Name" value="{{$user->name}}" />
-        </div>
-        <div>
-            <label>Email</label>
-            <input type="text" name="email" placeholder="email" value="{{$user->email}}" />
-        </div>
-        <div>
-            <input type="submit" value="Update" />
-        </div>
-    </form>
-</body>
-</html>
+</div>
+
+<style>
+  body{
+    font-family: "Bebas Neue", sans-serif;
+    background-color: #4A5859;
+    color: #98D831;
+  }
+
+  a{
+    color: #98D831;
+
+  }
+</style>
 @endsection

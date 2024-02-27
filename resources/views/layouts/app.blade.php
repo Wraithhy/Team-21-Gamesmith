@@ -106,7 +106,7 @@ if(Auth::user())
                             <a href="/product">inventory</a>
                         </li>
                         <li class="nav-link">
-                            <a href="/users">Users</a>
+                            <a href="/userPage">Users</a>
                         </li>
                         @endif
                     </li>
