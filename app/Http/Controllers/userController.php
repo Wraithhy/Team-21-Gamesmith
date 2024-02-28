@@ -30,7 +30,6 @@ class userController extends Controller
           'password' => 'required',
       ]);
   
-      // Hash the password before storing it
       $request['password'] = Hash::make($request['password']);
   
       User::create($request->all());
@@ -59,13 +58,11 @@ class userController extends Controller
           return redirect()->route('users.index')->with('error', 'User not found.');
       }
   
-      // Update name and email
       $user->update([
           'name' => $request->input('name'),
           'email' => $request->input('email'),
       ]);
   
-      // Update password only if provided
       if ($request->filled('password')) {
           $user->update(['password' => Hash::make($request->input('password'))]);
       }

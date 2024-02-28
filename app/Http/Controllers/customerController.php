@@ -38,13 +38,11 @@ class customerController extends Controller
             return redirect()->route('home');
         }
 
-        // Update name and email
         $user->update([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
         ]);
 
-        // Update password only if provided
         if ($request->filled('password')) {
             $user->update(['password' => Hash::make($request->input('password'))]);
         }
