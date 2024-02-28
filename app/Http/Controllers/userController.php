@@ -1,7 +1,6 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
@@ -28,7 +27,7 @@ class userController extends Controller
       $request->validate([
           'name' => 'required',
           'email' => 'required',
-          'password' => 'required', // You can adjust the min length as needed
+          'password' => 'required',
       ]);
   
       // Hash the password before storing it
@@ -51,7 +50,7 @@ class userController extends Controller
       $request->validate([
           'name' => 'required',
           'email' => 'required|email',
-          'password' => 'nullable|min:6', // Making password optional; add any necessary rules
+          'password' => 'nullable',
       ]);
   
       $user = User::find($id);

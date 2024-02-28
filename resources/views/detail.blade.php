@@ -8,7 +8,7 @@
 <div class="container">
    <div class="row">
        <div class="col-sm-6">
-       <img class="detail-img" src="{images/{{$product->id}}.png}" alt="">
+       <img class="detail-img" src="images/{{$product->id}}.png" alt="img">
        </div>
        <div class="col-sm-6">
            <a href="/">Go Back</a>
@@ -17,12 +17,6 @@
        <p>Details: {{$product['description']}}</p>
        <h4>category: {{$product['category']}}</h4>
        <br><br>
-       <!--<form method="POST" action="/add_to_cart">
-        @csrf
-    <input type="hidden" name="product_id" value="{{ $product->id }}">
-    <input class="quantNumber" type="number" name="quantity" value="1" min="1">
-    <button class="addToCart" type="submit">Add to Cart</button>
-    </form>-->
     <p class="btn-holder"><a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-warning btn-block text-center" role="button">Add to cart</a> </p>
        <br><br>
        <button class="button">Buy Now</button>
@@ -41,6 +35,11 @@
 
     .addToCart{
         color: black;
+    }
+
+    .detail-img{
+        width: 800px;
+        height: 800px;
     }
 
 </style>
