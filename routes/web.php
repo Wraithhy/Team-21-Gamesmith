@@ -54,4 +54,7 @@ Route::get("customerDetails", [customerController::class, 'index'])->name('custo
 Route::get("customerEdit/{id}", [customerController::class, 'edit'])->name('customer.edit');
 Route::put('/customer/{id}/update', [customerController::class, 'update'])->name('customer.update');
 
+Route::post('/contact-form/store', [ContactUsController::class, 'store'])->name('contact-form.store');
+
+
 
