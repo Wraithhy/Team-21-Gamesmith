@@ -33,5 +33,12 @@ class ContactUsController extends Controller
     
         return redirect('/');
     }
+
+    public function show(){
+
+        return view('reviews', [
+            'reviews' => contactForm::all()
+        ]);
+    }
     
 }

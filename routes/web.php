@@ -8,10 +8,8 @@ use App\Http\Controllers\userController;
 use App\Http\Controllers\allProductsController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\customerController;
-
-
 use App\Http\Controllers\ContactUsController;
-
+use Faker\Guesser\Name;
 
 Auth::routes();
 
@@ -31,6 +29,7 @@ Route::group(['middleware' => ['auth','admin']], function () {
    Route::get('/users/{user}/edit', userController::class .'@edit')->name('users.edit');
    Route::put('/users/{user}', userController::class .'@update')->name('users.update');
    Route::delete('/users/{user}', userController::class .'@destroy')->name('users.destroy');
+   Route::get('/reviews', ContactUsController::class.'@show')->name('reviews.show');
 });
 
 
