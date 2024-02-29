@@ -36,25 +36,46 @@ class newProductController extends Controller
         return view('search',['products'=>$data]);
     }
     
-    public function addToCart(Request $req)
+
+    public function addToCart($id)
     {
-        // Check if a user is authenticated
-        if (Auth::check()) {
-            // Get the currently authenticated user
-            $user = Auth::user();
+        $product = Product::findOrFail($id);
     
-            // Create a new Cart instance and save it to the database
-            $cart = new Cart;
-            $cart->user_id = $user->id;
-            $cart->product_id = $req->product_id;
-            $cart->quantity = 1;
-            $cart->save();
+        $cart = session()->get('cart', []);
     
-            return redirect('/');
+        if(isset($cart[$id])) {
+            $cart[$id]['quantity']++;
         } else {
-            return redirect('/login');
+            $cart[$id] = [
+                "name" => $product->name,
+                "quantity" => 1,
+                "price" => $product->price,
+            ];
+        }
+    
+        session()->put('cart', $cart);
+        $user = auth()->user(); 
+        $cartItem = new Cart;
+        $cartItem->user_id = $user->id;
+        $cartItem->product_id = $id; 
+        $cartItem->quantity = 1;
+        $cartItem->save();
+    
+        return redirect()->back();
+    }
+    
+    
+
+    public function update(Request $request)
+    {
+        if($request->id && $request->quantity){
+            $cart = session()->get('cart');
+            $cart[$request->id]["quantity"] = $request->quantity;
+            session()->put('cart', $cart);
+            session()->flash('success', 'Cart updated successfully');
         }
     }
+    
     
     static function cartItem()
     {
@@ -74,11 +95,16 @@ class newProductController extends Controller
         return view('cartlist',['products'=>$products]);
     }
     
-    
-    function removeCart($id)
+    public function remove(Request $request)
     {
-        Cart::destroy($id);
-        return redirect('cartlist');
+        if($request->id) {
+            $cart = session()->get('cart');
+            if(isset($cart[$request->id])) {
+                unset($cart[$request->id]);
+                session()->put('cart', $cart);
+            }
+            session()->flash('success', 'Product removed successfully');
+        }
     }
     
     
@@ -128,3 +154,36 @@ class newProductController extends Controller
         return view('auth.login');
     }
 }
+
+
+
+
+
+
+    /*public function addToCart(Request $req)
+    {
+        if (Auth::check()) {
+            $user = Auth::user();
+            $product_id = $req->product_id;
+            $quantity = $req->quantity;
+
+    
+            $existingCartItem = Cart::where('user_id', $user)
+                ->where('product_id', $product_id)
+                ->first();    
+            if ($existingCartItem) {
+                $existingCartItem->update(['quantity' => $existingCartItem->quantity + $req->quantity]);
+            } else {
+                $cart = new Cart;
+                $cart->user_id = $user->id;
+                $cart->product_id = $req->product_id;
+                $cart->quantity = $req->quantity;
+                $cart->save();
+            }
+    
+            return redirect('/')->with('success', 'Product added to cart.');
+        } else {
+            return redirect('/login');
+        }
+    }*/
+    

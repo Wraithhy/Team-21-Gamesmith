@@ -29,8 +29,8 @@ use Illuminate\Support\Facades\Auth;
             </div>
         @endif
 
-        <div>
-            <a href="{{ route('product.create') }}" style="font-family: 'Bebas Neue', sans-serif; font-size: 22px;">Create a Product</a>
+        <div class="create">
+            <a href="{{ route('product.create') }}">Create a Product</a>
         </div>
 
         <table>

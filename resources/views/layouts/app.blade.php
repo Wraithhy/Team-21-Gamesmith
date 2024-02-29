@@ -15,6 +15,9 @@ if(Auth::user())
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -22,8 +25,9 @@ if(Auth::user())
     <title>Gamesmith</title>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link rel="dns-prefetch" href="///fonts.bunny.net">
+    <link rel="stylesheet" href="/https://fonts.bunny.net/css?family=Nunito">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -32,7 +36,7 @@ if(Auth::user())
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{url('/')}}">
                     GameSmith
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -43,22 +47,22 @@ if(Auth::user())
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-link">
-                            <a href="aboutus">
+                            <a href="/aboutus">
                                 About us
                             </a>
                         </li>
                         <li class="nav-link">
-                            <a href="contactus">
+                            <a href="/contactus">
                                 contact us
                             </a>
                         </li>
                         <li class="nav-link">
-                            <a href="allProducts">
+                            <a href="/allProducts">
                                 products
                             </a>
                         </li>
                         <li class="nav-link">
-                            <a href="myorders">
+                            <a href="/myorders">
                                 Orders
                             </a>
                         </li>
@@ -99,8 +103,20 @@ if(Auth::user())
                             {{ Auth::user()->name }}
                         </a>
                         <li class="nav-link">
+                            <a href="{{ route('customer.details') }}">my details</a>
+
+                        </li>
+                        @if(Auth::user()->is_admin == 1)
+                        <li class="nav-link">
                             <a href="/product">inventory</a>
                         </li>
+                        <li class="nav-link">
+                            <a href="/userPage">Users</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="{{route('reviews.show')}}">Reviews</a>
+                        </li>
+                        @endif
                     </li>
                     <li class="nav-link"><a href="{{ route('logout') }}"
                     onclick="event.preventDefault();

@@ -1,0 +1,52 @@
+*{
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.body{
+    font-family: "Bebas Neue", sans-serif;
+    box-sizing: border-box;
+    background-color: #4A5859;
+    color: #F0F2EF;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: max-content;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100vh;
+}
+
+.detailcontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.containerright{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 50%;
+}
+
+.detail-img{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.quantNumber{
+    color: black;
+}
+
+.addToCart{
+    color: black;
+}
+
+a{
+    color: #98d831;
+}

@@ -1,12 +1,16 @@
 @extends('layouts.app')
 @section("content")
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+  <link rel="stylesheet" href="css/myOrders.css">
+</head>
 <div class="custom-product">
-     <div class="col-sm-10">
+     <div >
         <div class="trending-wrapper">
             <h4>my orders </h4>
             @foreach($orders as $item)
             <div class=" row searched-item cart-list-devider">
-             <div class="col-sm-3">
+             <div>
                 <a href="detail/{{$item->id}}">
                     <img class="trending-image" src="images/{{$item->id}}.png">
                   </a>
@@ -28,4 +32,5 @@
 
      </div>
 </div>
+
 @endsection 

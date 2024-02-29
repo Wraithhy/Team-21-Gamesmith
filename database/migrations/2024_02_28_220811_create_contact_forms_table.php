@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('contact_forms', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->decimal('price');
-            $table->longText('description');
-            $table->enum('Category',['Headset','Keyboards','Controllers','Mice', 'Monitors']);
-            $table->unsignedInteger('quantity')->default(0);
+            $table->string('phone');
+            $table->string('email');
+            $table->string('cEmail');
+            $table->json('contactPref'); // Store checkboxes as JSON array
+            $table->text('message');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('contact_forms');
     }
 };
