@@ -11,7 +11,7 @@
 
 </head>
 <body>
-<link rel="stylesheet" href="{{ asset('/css/detail.css') }}">
+<link rel="stylesheet" href=/css/detail.css>
     <div class="detailcontainer">
         <div class="containerleft">
             <img class="detail-img" src="/images/{{$product->id}}.png" alt="">
@@ -24,22 +24,16 @@
             <h4>Category: {{$product['Category']}}</h4>
             <br><br>
         </div>
-        <!--<form method="POST" action="/add_to_cart">
+        <form method="POST" action="/add_to_cart">
         @csrf
         <input type="hidden" name="product_id" value="{{ $product->id }}">
         <input class="quantNumber" type="number" name="quantity" value="1" min="1">
         <button class="addToCart" type="submit">Add to Cart</button>
         </form>
         <p class="btn-holder"><a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-warning btn-block text-center" role="button">Add to cart</a> </p>
-        <br><br>
+        <!--<br><br>
         <button class="button">Buy Now</button>
         <br><br>-->
     </div>
 </body>
-
-<style>
-    body{
-        font-family: "Bebas Neue", sans-serif;
-    }
-</style>
 @endsection
