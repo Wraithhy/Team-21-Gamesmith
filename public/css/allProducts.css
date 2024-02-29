@@ -1,7 +1,11 @@
 body{
-  background-color: #4A5859;
   font-family: "Bebas Neue", sans-serif;
-
+  box-sizing: border-box;
+  background-color: #4A5859;
+  color: #F0F2EF;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 
@@ -9,34 +13,111 @@ a{
   color: #98d831;
 }
 
+.headerbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
 .title{
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas Neue", sans-serif;
+  color: #98d831;
+  stroke: #1E1E1E;
+}
+
+h1{
+  font-family: "Bebas Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin: -10px;
+}
+
+p1{
+  font-family: "Bebas Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background-color: #4A5859;
+  color: #bebebe;
+}
+
+h2{
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 35px;
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+h4{
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 35px;
+  max-width: 100%;
+  margin-top: 50px;
+}
 
 .container_grid{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 50px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 50px;
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 .item{
-    width: 100%;
-    box-sizing: border-box;
+  background-color:#68797b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 300px;    
+  border: 3px solid #1E1E1E;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #1E1E1E;
 }
 
 
 .products{
-      display: flex;
-      justify-content: space-around;
-        align-items: center;
-        border: 1px solid #ccc;
-        padding: 10px; 
-        text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px; 
 }
 
 .productSlider{
-      display: block;
-      max-width: 100%;
-        height: auto;
-        width: 200px;
+  background-color: #eceaea;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px #1E1E1E;
+  border: 2px solid #4A5859;
+  border-radius: 10px;
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+  margin-inline: auto;
 }

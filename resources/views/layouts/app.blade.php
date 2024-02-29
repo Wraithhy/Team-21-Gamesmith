@@ -46,22 +46,22 @@ if(Auth::user())
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-link">
-                            <a href="aboutus">
+                            <a href="/aboutus">
                                 About us
                             </a>
                         </li>
                         <li class="nav-link">
-                            <a href="contactus">
+                            <a href="/contactus">
                                 contact us
                             </a>
                         </li>
                         <li class="nav-link">
-                            <a href="allProducts">
+                            <a href="/allProducts">
                                 products
                             </a>
                         </li>
                         <li class="nav-link">
-                            <a href="myorders">
+                            <a href="/myorders">
                                 Orders
                             </a>
                         </li>

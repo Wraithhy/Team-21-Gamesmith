@@ -57,3 +57,4 @@ if(Session::has('user'))
     </div><!-- /.container-fluid -->
   </nav>
 
+  
