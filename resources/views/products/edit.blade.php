@@ -27,10 +27,6 @@
             <input class="edit-n-input" type="text" name="name" placeholder="Name" value="{{$product->name}}" />
         </div>
         <div>
-            <label>Qty</label>
-            <input class="edit-q-input" type="text" name="qty" placeholder="Qty" value="{{$product->qty}}" />
-        </div>
-        <div>
             <label>Price</label>
             <input class="edit-p-input" type="text" name="price" placeholder="Price" value="{{$product->price}}" />
         </div>

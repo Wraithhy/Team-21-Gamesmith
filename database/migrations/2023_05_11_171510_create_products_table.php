@@ -16,8 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->decimal('price');
             $table->longText('description');
-            $table->enum('Category',['Headset','Keyboards','Controllers','Mice', 'Monitors']);
-            $table->unsignedInteger('quantity')->default(0);
+            $table->enum('Category',['Headset','Keyboards','Controllers','Mice', 'Monitors'])->nullable();
             $table->timestamps();
         });
     }

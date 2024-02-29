@@ -26,7 +26,6 @@ class ProductController extends Controller
     public function store(Request $request){
         $data = $request->validate([
             'name' => 'required',
-            'qty' => 'required|numeric',
             'price' => 'required|decimal:0,2',
             'description' => 'nullable'
         ]);
@@ -44,7 +43,6 @@ class ProductController extends Controller
     public function update(Product $product, Request $request){
         $data = $request->validate([
             'name' => 'required',
-            'qty' => 'required|numeric',
             'price' => 'required|decimal:0,2',
             'description' => 'nullable'
         ]);
