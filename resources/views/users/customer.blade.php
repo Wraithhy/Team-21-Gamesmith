@@ -25,8 +25,9 @@
             
         </table> <br> <br>
 
-        <a href="myorders">My previous orders</a>
-
+        <div class="myorders"> 
+            <a href="myorders">My previous orders</a>
+        </div>
 
     </div>
 </body>
