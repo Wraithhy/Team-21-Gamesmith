@@ -1,5 +1,9 @@
 @extends('layouts.app')
 @section("content")
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+  <link rel="stylesheet" href="css/myOrders.css">
+</head>
 <div class="custom-product">
      <div >
         <div class="trending-wrapper">
@@ -28,4 +32,5 @@
 
      </div>
 </div>
+
 @endsection 

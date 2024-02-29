@@ -1,7 +1,6 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
@@ -28,10 +27,9 @@ class userController extends Controller
       $request->validate([
           'name' => 'required',
           'email' => 'required',
-          'password' => 'required', // You can adjust the min length as needed
+          'password' => 'required',
       ]);
   
-      // Hash the password before storing it
       $request['password'] = Hash::make($request['password']);
   
       User::create($request->all());
@@ -51,7 +49,7 @@ class userController extends Controller
       $request->validate([
           'name' => 'required',
           'email' => 'required|email',
-          'password' => 'nullable|min:6', // Making password optional; add any necessary rules
+          'password' => 'nullable',
       ]);
   
       $user = User::find($id);
@@ -60,13 +58,11 @@ class userController extends Controller
           return redirect()->route('users.index')->with('error', 'User not found.');
       }
   
-      // Update name and email
       $user->update([
           'name' => $request->input('name'),
           'email' => $request->input('email'),
       ]);
   
-      // Update password only if provided
       if ($request->filled('password')) {
           $user->update(['password' => Hash::make($request->input('password'))]);
       }

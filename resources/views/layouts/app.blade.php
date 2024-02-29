@@ -102,12 +102,19 @@ if(Auth::user())
                         <a>
                             {{ Auth::user()->name }}
                         </a>
+                        <li class="nav-link">
+                            <a href="{{ route('customer.details') }}">my details</a>
+
+                        </li>
                         @if(Auth::user()->is_admin == 1)
                         <li class="nav-link">
                             <a href="/product">inventory</a>
                         </li>
                         <li class="nav-link">
                             <a href="/userPage">Users</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="{{route('reviews.show')}}">Reviews</a>
                         </li>
                         @endif
                     </li>

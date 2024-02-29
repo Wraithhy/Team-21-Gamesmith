@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section("content")
+<head>
+    <link rel="stylesheet" href="css/orderNow.css">
+</head>
 <div class="custom-product">
     <div class="col-sm-10">
         <table class="table">
@@ -27,7 +30,7 @@
             <form action="/orderplace" method="POST">
                 @csrf
                 <div class="form-group">
-                    <textarea name="address" placeholder="enter your address" class="form-control"></textarea>
+                    <textarea name="address" placeholder="enter your address" class="form-control" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="pwd">Payment Method</label> <br> <br>

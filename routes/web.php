@@ -7,9 +7,9 @@ use App\Http\Controllers\newProductController;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\allProductsController;
 use App\Http\Controllers\AboutUsController;
-
+use App\Http\Controllers\customerController;
 use App\Http\Controllers\ContactUsController;
-
+use Faker\Guesser\Name;
 
 Auth::routes();
 
@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth','admin']], function () {
    Route::get('/users/{user}/edit', userController::class .'@edit')->name('users.edit');
    Route::put('/users/{user}', userController::class .'@update')->name('users.update');
    Route::delete('/users/{user}', userController::class .'@destroy')->name('users.destroy');
+   Route::get('/reviews', ContactUsController::class.'@show')->name('reviews.show');
 });
 
 
@@ -47,3 +48,12 @@ Route::get('contactus', [ContactUsController::class, 'index']);
 Route::get('add-to-cart/{id}', [newProductController::class, 'addToCart'])->name('add.to.cart');
 Route::patch('update-cart', [newProductController::class, 'update'])->name('update.cart');
 Route::delete('remove-from-cart', [newProductController::class, 'remove'])->name('remove.from.cart');
+
+Route::get("customerDetails", [customerController::class, 'index'])->name('customer.details');
+Route::get("customerEdit/{id}", [customerController::class, 'edit'])->name('customer.edit');
+Route::put('/customer/{id}/update', [customerController::class, 'update'])->name('customer.update');
+
+Route::post('/contact-form/store', [ContactUsController::class, 'store'])->name('contact-form.store');
+
+
+
