@@ -16,7 +16,7 @@ body{
     background-color:#68797b;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     max-width: 50%;
     margin: 0 auto;   
     border: 3px solid #1E1E1E;
@@ -24,35 +24,66 @@ body{
     box-shadow: 0 2px 5px #1E1E1E;
 }
 
+.containerleft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
 .containerright{
     display: flex;
     flex-wrap: wrap;
     max-width: 50%;
+    margin: 10px;
 }
 
 .detail-img{
     background-color: #eceaea;
     display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: 0 2px 5px #1E1E1E;
     border: 2px solid #4A5859;
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
     padding: 10px;
     margin: 10px;
 }
 
 h2,h3,h4{
     color:black;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 100%;
+    max-width: 100%;
+}
+
+.cartcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: -20px 0px 0px 0px;
 }
 
 .quantNumber{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: black;
+    margin: 0 auto;
+    margin: 0px 10px 10px 0px;
 }
 
-.addToCart{
-    color: black;
+.btnholder{
+    display: flex;
+    justify-content: center;
+}
+
+.btn.btn-warning{
+    background-color: #98d831;
+    color:#1E1E1E;
+    font-size: 15px;
+    border: 1px solid #1E1E1E;
 }
 
 a{
