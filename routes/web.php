@@ -47,7 +47,7 @@ Route::get('aboutus', [AboutUsController::class, 'index']);
 Route::get('contactus', [ContactUsController::class, 'index']);
 Route::get('add-to-cart/{id}', [newProductController::class, 'addToCart'])->name('add.to.cart');
 Route::patch('update-cart', [newProductController::class, 'update'])->name('update.cart');
-Route::delete('remove-from-cart', [newProductController::class, 'remove'])->name('remove.from.cart');
+Route::delete('remove-from-cart/{id}', [newProductController::class, 'removeFromCart'])->name('remove.from.cart');
 
 Route::get("customerDetails", [customerController::class, 'index'])->name('customer.details');
 Route::get("customerEdit/{id}", [customerController::class, 'edit'])->name('customer.edit');
@@ -56,4 +56,5 @@ Route::put('/customer/{id}/update', [customerController::class, 'update'])->name
 Route::post('/contact-form/store', [ContactUsController::class, 'store'])->name('contact-form.store');
 
 
+Route::post('/update-quantity', [newProductController::class,'updateQuantity'])->name('update.quantity');
 

@@ -66,14 +66,17 @@ class newProductController extends Controller
     
     
 
-    public function update(Request $request)
+    public function updateQuantity(Request $request)
     {
-        if($request->id && $request->quantity){
-            $cart = session()->get('cart');
-            $cart[$request->id]["quantity"] = $request->quantity;
-            session()->put('cart', $cart);
+        if ($request->cart_id && $request->quantity) {
+            $cartItem = Cart::findOrFail($request->cart_id);
+            $cartItem->quantity = $request->quantity;
+            $cartItem->save();
+    
             session()->flash('success', 'Cart updated successfully');
         }
+    
+        return redirect()->route('cart.list');
     }
     
     
@@ -95,16 +98,20 @@ class newProductController extends Controller
         return view('cartlist',['products'=>$products]);
     }
     
-    public function remove(Request $request)
+    public function removeFromCart($id)
     {
-        if($request->id) {
-            $cart = session()->get('cart');
-            if(isset($cart[$request->id])) {
-                unset($cart[$request->id]);
-                session()->put('cart', $cart);
-            }
-            session()->flash('success', 'Product removed successfully');
+        $cart = session()->get('cart', []);
+
+        if(isset($cart[$id])) {
+            unset($cart[$id]);
+
+            $user = auth()->user();
+            Cart::where('user_id', $user->id)->where('product_id', $id)->delete();
+
+            session()->put('cart', $cart);
         }
+
+        return redirect()->back();
     }
     
     

@@ -28,10 +28,6 @@
             <input class="name-input" type="text" name="name" placeholder="Name" />
         </div>
         <div>
-            <label>Qty</label>
-            <input class="qty-input" type="text" name="qty" placeholder="Qty" />
-        </div>
-        <div>
             <label>Price</label>
             <input class="price-input" type="text" name="price" placeholder="Price" />
         </div>
