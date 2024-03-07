@@ -131,6 +131,9 @@
                             <div class="col-sm-9">
                                 <h4 class="nomargin">{{ $details['name'] }}</h4>
                             </div>
+                            <div class="col-sm-9">
+                                <img src="images/{{$item->id}}.png" alt="">
+                            </div>
                         </div>
                     </td>
                     <td data-th="Price">${{ $details['price'] }}</td>
