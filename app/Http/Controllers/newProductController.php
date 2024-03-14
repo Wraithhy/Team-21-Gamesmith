@@ -39,29 +39,35 @@ class newProductController extends Controller
 
     public function addToCart($id)
     {
-        $product = Product::findOrFail($id);
+        if(Auth::check()){
+            $product = Product::findOrFail($id);
     
-        $cart = session()->get('cart', []);
-    
-        if(isset($cart[$id])) {
-            $cart[$id]['quantity']++;
-        } else {
-            $cart[$id] = [
-                "name" => $product->name,
-                "quantity" => 1,
-                "price" => $product->price,
-            ];
+            $cart = session()->get('cart', []);
+        
+            if(isset($cart[$id])) {
+                $cart[$id]['quantity']++;
+            } else {
+                $cart[$id] = [
+                    "name" => $product->name,
+                    "quantity" => 1,
+                    "price" => $product->price,
+                ];
+            }
+        
+            session()->put('cart', $cart);
+            $user = auth()->user(); 
+            $cartItem = new Cart;
+            $cartItem->user_id = $user->id;
+            $cartItem->product_id = $id; 
+            $cartItem->quantity = 1;
+            $cartItem->save();
+            
+            return redirect()->back();
+
         }
+
     
-        session()->put('cart', $cart);
-        $user = auth()->user(); 
-        $cartItem = new Cart;
-        $cartItem->user_id = $user->id;
-        $cartItem->product_id = $id; 
-        $cartItem->quantity = 1;
-        $cartItem->save();
-    
-        return redirect()->back();
+        return redirect('login');
     }
     
     
