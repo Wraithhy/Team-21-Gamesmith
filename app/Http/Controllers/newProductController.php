@@ -149,6 +149,10 @@ class newProductController extends Controller
              $order->save();
              Cart::where('user_id',$userId)->delete(); 
          }
+
+         $userAddress =  new User;
+         $userAddress->address = $req->address;
+         $userAddress->save;
          $req->input();
          return redirect('/');
     }
