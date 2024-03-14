@@ -13,6 +13,10 @@ a{
   color: #98d831;
 }
 
+b{
+  color: #1E1E1E;
+}
+
 .headerbox{
   display: flex;
   justify-content: center;

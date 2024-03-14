@@ -1,4 +1,3 @@
-
 <!--<div class="custom-product">
     <div class="col-sm-10">
         <div class="trending-wrapper">
@@ -24,7 +23,6 @@
                                         <i class="fa-solid fa-minus"></i>
                                     </button>
                                 </span>
-                                <input type="text" class="form-control quantity-input" value="{{ $item->quantity }}" readonly>
                                 <span class="input-group-btn">
                                     <button class="btn1 plus" type="button" data-item-id="{{ $item->cart_id }}">
                                         <i class="fa-solid fa-plus"></i>
@@ -105,11 +103,10 @@
 @extends('layouts.app')
   
 @section('content')
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<head>
+    <link rel="stylesheet" href="css/cartlist.css">
+</head>
+
     <table id="cart">
     <thead>
         <tr>
@@ -130,6 +127,8 @@
                         <div class="row">
                             <div class="col-sm-9">
                                 <h4 class="nomargin">{{ $details['name'] }}</h4>
+                            </div>
+                            <div class="col-sm-9">
                             </div>
                         </div>
                     </td>
