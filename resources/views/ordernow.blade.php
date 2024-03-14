@@ -29,8 +29,9 @@
         <div>
             <form action="/orderplace" method="POST">
                 @csrf
+                @method('post')
                 <div class="form-group">
-                    <textarea name="address" placeholder="enter your address" class="form-control" required></textarea>
+                <input type="text" placeholder="Address" class="form-control" id="address" name="address" value="{{ Auth::user()->address }}" required>
                 </div>
                 <div class="form-group">
                     <label for="pwd">Payment Method</label> <br> <br>

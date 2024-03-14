@@ -23,6 +23,11 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="email">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" value="{{ $users->address }}" required>
+                </div>
+
+                <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" class="form-control" id="password" name="password">
                 </div>

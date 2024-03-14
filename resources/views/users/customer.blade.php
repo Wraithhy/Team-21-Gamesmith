@@ -13,10 +13,13 @@
             <tr>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Addresss</th>
             </tr>
                 <tr>
                     <td>{{ Auth::user()->name }}</td>
                     <td>{{ Auth::user()->email }}</td>
+                    <td>{{ Auth::user()->address }}</td>
+
                     <td>
                         <a href="{{route('customer.edit', Auth::user()->id)}}">Edit</a>
                     </td>

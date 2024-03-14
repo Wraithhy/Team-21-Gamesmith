@@ -50,6 +50,7 @@ class userController extends Controller
           'name' => 'required',
           'email' => 'required|email',
           'password' => 'nullable',
+          'address' => 'nullable',
       ]);
   
       $user = User::find($id);
@@ -61,6 +62,7 @@ class userController extends Controller
       $user->update([
           'name' => $request->input('name'),
           'email' => $request->input('email'),
+          'address' => $request->input('address'),
       ]);
   
       if ($request->filled('password')) {

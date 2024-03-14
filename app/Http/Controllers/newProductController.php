@@ -94,6 +94,10 @@ class newProductController extends Controller
     
     function cartList()
     {
+        $emptCart = new Cart();
+        if($emptCart == null){
+            return redirect('/');;
+        }
         $userId=Auth::user()->id;
        $products= DB::table('cart')
         ->join('products','cart.product_id','=','products.id')
@@ -135,26 +139,27 @@ class newProductController extends Controller
     
     function orderPlace(Request $req)
     {
-        $userId=Auth::user()->id;
-         $allCart= Cart::where('user_id',$userId)->get();
-         foreach($allCart as $cart)
-         {
-             $order= new Order;
-             $order->product_id=$cart['product_id'];
-             $order->user_id=$cart['user_id'];
-             $order->status="pending";
-             $order->payment_method=$req->payment;
-             $order->payment_status="pending";
-             $order->address=$req->address;
-             $order->save();
-             Cart::where('user_id',$userId)->delete(); 
-         }
-
-         $userAddress =  new User;
-         $userAddress->address = $req->address;
-         $userAddress->save;
-         $req->input();
-         return redirect('/');
+        $userId = Auth::user()->id;
+        $allCart = Cart::where('user_id', $userId)->get();
+        
+        foreach ($allCart as $cart) {
+            $order = new Order;
+            $order->product_id = $cart['product_id'];
+            $order->user_id = $cart['user_id'];
+            $order->status = "pending";
+            $order->payment_method = $req->payment;
+            $order->payment_status = "pending";
+            $order->address = $req->address;
+            $order->save();
+            
+            $cart->delete();
+        }
+        
+        $user = Auth::user();
+        $user->address = $req->address;
+        $user->save();
+    
+        return redirect('/');
     }
     
     

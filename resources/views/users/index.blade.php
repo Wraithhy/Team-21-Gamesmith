@@ -19,12 +19,15 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Address</th>
+
             </tr>
             @foreach($users as $user )
                 <tr>
                     <td>{{ $user->id }}</td>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
+                    <td>{{ $user->address }}</td>
                     <td>
                         <a href="{{ route('users.edit', $user->id) }}">Edit</a>
                     </td>

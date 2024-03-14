@@ -3,27 +3,27 @@
 <div class="custom-product">
     <div class="trending-wrapper">
         <div class="card">
-        <a id="#MonitorJump"><h3>Monitors</h3></a>
+            <h3>Monitors</h3>
             <img src="images/1.png" class="img-top">
         </div>
 
         <div class="card">
-        <a id="#HeadsetJump"><h3>Headset</h3>
+            <h3>Headset</h3>
             <img src="images/6.png" class="img-top">
         </div>
 
         <div class="card">
             <h3>Keyboards</h3>
-            <a id="#KeyboardsJump"><img src="images/11.png" class="img-top">
+            <img src="images/11.png" class="img-top">
         </div>
 
         <div class="card">
-        <a id="#MiceJump"> <h3>Mice</h3>
+            <h3>Mice</h3>
             <img src="images/16.png" class="img-top">
         </div>
 
         <div class="card">
-        <a id="#ControllersJump"> <h3>Controllers</h3>
+            <h3>Controllers</h3>
             <img src="images/21.png" class="img-top">
         </div>
     </div>
