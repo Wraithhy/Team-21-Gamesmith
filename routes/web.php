@@ -9,6 +9,7 @@ use App\Http\Controllers\allProductsController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\customerController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\orderController;
 use Faker\Guesser\Name;
 
 Auth::routes();
@@ -44,6 +45,10 @@ Route::group(['middleware' => ['auth','admin']], function () {
    Route::delete('/users/{user}', userController::class .'@destroy')->name('users.destroy');
 
    Route::get('/reviews', ContactUsController::class.'@show')->name('reviews.show');
+   
+   Route::get('customerOrder', [orderController::class,'index']);
+   
+   Route::put('/orders/{orderId}/process', [orderController::class, 'processOrder'])->name('processOrder');
 });
 
 
@@ -88,4 +93,6 @@ Route::post('/contact-form/store', [ContactUsController::class, 'store'])->name(
 
 
 Route::post('/update-quantity', [newProductController::class,'updateQuantity'])->name('update.quantity');
+
+
 
