@@ -95,4 +95,3 @@ Route::post('/contact-form/store', [ContactUsController::class, 'store'])->name(
 Route::post('/update-quantity', [newProductController::class,'updateQuantity'])->name('update.quantity');
 
 
-

@@ -8,22 +8,22 @@
         </div>
 
         <div class="card">
-        <a id="#HeadsetJump"><h3>Headset</h3></a>
+            <h3>Headset</h3>
             <img src="images/6.png" class="img-top">
         </div>
 
         <div class="card">
-        <a id="#KeyboardsJump"></a><h3>Keyboards</h3></a>
+            <h3>Keyboards</h3>
             <img src="images/11.png" class="img-top">
         </div>
 
         <div class="card">
-        <a id="#MiceJump"> <h3>Mice</h3></a>
+            <h3>Mice</h3>
             <img src="images/16.png" class="img-top">
         </div>
 
         <div class="card">
-        <a id="#ControllersJump"> <h3>Controllers</h3></a>
+            <h3>Controllers</h3>
             <img src="images/21.png" class="img-top">
         </div>
     </div>

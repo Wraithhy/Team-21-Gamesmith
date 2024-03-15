@@ -11,7 +11,7 @@
             <p1>Look through our high and medium end gaming products made for all systems!</p1>
         </div>
     </div>
-    <a id="#HeadsetJump"><h2>Headsets</h2></a>
+    <h2>Headsets</h2>
     <div class="container_grid">
         @foreach ($products->slice(0, 5) as $item)
             <div class="item {{$item['id']==1?'active':''}}">
@@ -24,7 +24,7 @@
             </div>
         @endforeach
     </div>
-    <a id="#KeyboardsJump"><h4>Keyboards</h4></a>
+    <h4>Keyboards</h4>
     <div class="container_grid">
         @foreach ($products->slice(5, 5) as $item)
             <div class="item {{$item['id']==1?'active':''}}">
@@ -37,7 +37,7 @@
             </div>
         @endforeach
     </div>
-    <a id="#ControllersJump"><h4>Controllers</h4></a>
+    <h4>Controllers</h4>
     <div class="container_grid">
         @foreach ($products->slice(10, 5) as $item)
             <div class="item {{$item['id']==1?'active':''}}">
@@ -50,7 +50,7 @@
             </div>
         @endforeach
     </div>
-    <a id="#MiceJump"><h4>Mouses</h4></a>
+    <h4>Mouses</h4>
     <div class="container_grid">
         @foreach ($products->slice(15, 5) as $item)
             <div class="item {{$item['id']==1?'active':''}}">
@@ -63,7 +63,7 @@
             </div>
         @endforeach
     </div>
-    <a id="#MonitorJump"><h4>Monitors</h4></a>
+    <h4>Monitors</h4>
     <div class="container_grid">
         @foreach ($products->slice(20, 5) as $item)
             <div class="item {{$item['id']==1?'active':''}}">
