@@ -2,6 +2,7 @@
 @section("content")
 <head>
 <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('/css/customerEdit.css') }}">
 
 </head>
 <div class="container h-100 mt-5">
@@ -38,16 +39,5 @@
     </div>
 </div>
 
-<style>
-  body{
-    font-family: "Bebas Neue", sans-serif;
-    background-color: #4A5859;
-    color: #98D831;
-  }
 
-  a{
-    color: #98D831;
-
-  }
-</style>
 @endsection
