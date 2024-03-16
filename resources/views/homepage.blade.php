@@ -16,15 +16,10 @@
 
 @section('content')
 <head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
-        <meta charset = "utf-8" />
-        <title>Contact Us</title>
-        <meta name="viewport" content="width=device-width inital-scale-1.0" />
         <link rel="stylesheet" href="css/homepage_style.css">
         <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
 </head>
-<body>
+<!--<body>
 <div class="homepagecontainer" >
     <div class="text-center">
         <h1 class="mh"> Welcome To Gamesmith</h>
@@ -136,7 +131,64 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
+  </body>-->
+
+  <section id="hero">
+				<div class="introduction">
+        <div class="container">
+          <div class="text-center">
+            <div class="text">
+            <h1>Welcome To Gamesmith</h1>
+            <p>
+            Welcome to Gamesmith, where gaming prowess meets unparalleled gear. Elevate your play, conquer with us!
+						</p>
+            </div>
+        <h2 class="text">Our Product Line!</h2>
+        <p class="text"> Discover elite gaming gear in our curated categories!</p>
+        <div class='container2'>
+        <div class="card mx-auto " style="width: 10rem;">
+          <img src="images/22.png" class="card-img-top div.embed-responsive" alt="..." >
+          <div class="card-body">
+          <a href="/allProducts#MonitorsJump" class="link">Monitors</a>
+            
+          </div>
+        </div>
+        <div class="card mx-auto" style="width: 10rem;">
+          <img  src="images/18.png" class="card-img-top div.embed-responsive" alt="..." >
+          <div class="card-body">
+          <a href="/allProducts#MousesJump" class="link">Mouse</a>
+            
+          </div>
+        </div>
+        <div class="card mx-auto" style="width: 10rem;">
+          <img src="images/12.png" class="card-img-top div.embed-responsive" alt="..."  >
+          <div class="card-body">
+          <a href="/allProducts#ControllersJump" class="link">Controllers</a>
+            
+          </div>
+        </div>
+        <div class="card  mx-auto" style="width: 10rem;">
+          <img src="images/6.png" class="card-img-top div.embed-responsive" alt="..."  >
+          <div class="card-body">
+          <a href="/allProducts#KeyboardsJump" class="link">Keyboards</a>
+            
+          </div>
+        </div>
+        <div class="card  mx-auto" style="width: 10rem;">
+          <img src="images/1.png" class="card-img-top div.embed-responsive" alt="..."  >
+          <div class="card-body">
+          <a href="/allProducts#HeadsetJump" class="link">Headsets</a>
+            
+          </div>
+        </div>
+        </div>
+  </div>
+</div>
+			</div>
+			<div class="cover">
+				<img src="images/hero.JPG" alt="computing">
+			</div>
+		</section>
 </body>
 </html>
 
