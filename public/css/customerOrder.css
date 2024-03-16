@@ -1,0 +1,19 @@
+td {
+    padding: 20px;
+    color: white;
+}
+
+th {
+    padding: 20px;
+    color: white;
+}
+
+body {
+    background-color: #4A5859;
+    font-family: "Bebas Neue", sans-serif;
+    
+}
+
+a{
+    color: #98D831;
+}

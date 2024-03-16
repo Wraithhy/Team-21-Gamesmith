@@ -116,6 +116,9 @@ if(Auth::user())
                         <li class="nav-link">
                             <a href="{{route('reviews.show')}}">Reviews</a>
                         </li>
+                        <li class="nav-link">
+                            <a href="customerOrder">Customer Orders</a>
+                        </li>
                         @endif
                     </li>
                     <li class="nav-link"><a href="{{ route('logout') }}"

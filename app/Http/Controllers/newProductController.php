@@ -39,41 +39,50 @@ class newProductController extends Controller
 
     public function addToCart($id)
     {
-        $product = Product::findOrFail($id);
+        if(Auth::check()){
+            $product = Product::findOrFail($id);
     
-        $cart = session()->get('cart', []);
-    
-        if(isset($cart[$id])) {
-            $cart[$id]['quantity']++;
-        } else {
-            $cart[$id] = [
-                "name" => $product->name,
-                "quantity" => 1,
-                "price" => $product->price,
-            ];
+            $cart = session()->get('cart', []);
+        
+            if(isset($cart[$id])) {
+                $cart[$id]['quantity']++;
+            } else {
+                $cart[$id] = [
+                    "name" => $product->name,
+                    "quantity" => 1,
+                    "price" => $product->price,
+                ];
+            }
+        
+            session()->put('cart', $cart);
+            $user = auth()->user(); 
+            $cartItem = new Cart;
+            $cartItem->user_id = $user->id;
+            $cartItem->product_id = $id; 
+            $cartItem->quantity = 1;
+            $cartItem->save();
+            
+            return redirect()->back();
+
         }
+
     
-        session()->put('cart', $cart);
-        $user = auth()->user(); 
-        $cartItem = new Cart;
-        $cartItem->user_id = $user->id;
-        $cartItem->product_id = $id; 
-        $cartItem->quantity = 1;
-        $cartItem->save();
-    
-        return redirect()->back();
+        return redirect('login');
     }
     
     
 
-    public function update(Request $request)
+    public function updateQuantity(Request $request)
     {
-        if($request->id && $request->quantity){
-            $cart = session()->get('cart');
-            $cart[$request->id]["quantity"] = $request->quantity;
-            session()->put('cart', $cart);
+        if ($request->cart_id && $request->quantity) {
+            $cartItem = Cart::findOrFail($request->cart_id);
+            $cartItem->quantity = $request->quantity;
+            $cartItem->save();
+    
             session()->flash('success', 'Cart updated successfully');
         }
+    
+        return redirect()->route('cart.list');
     }
     
     
@@ -85,6 +94,10 @@ class newProductController extends Controller
     
     function cartList()
     {
+        $emptCart = new Cart();
+        if($emptCart == null){
+            return redirect('/');;
+        }
         $userId=Auth::user()->id;
        $products= DB::table('cart')
         ->join('products','cart.product_id','=','products.id')
@@ -94,17 +107,22 @@ class newProductController extends Controller
 
         return view('cartlist',['products'=>$products]);
     }
-    
-    public function remove(Request $request)
+
+
+    public function removeFromCart($id)
     {
-        if($request->id) {
-            $cart = session()->get('cart');
-            if(isset($cart[$request->id])) {
-                unset($cart[$request->id]);
-                session()->put('cart', $cart);
-            }
-            session()->flash('success', 'Product removed successfully');
+        $cart = session()->get('cart', []);
+
+        if(isset($cart[$id])) {
+            unset($cart[$id]);
+
+            $user = auth()->user();
+            Cart::where('user_id', $user->id)->where('product_id', $id)->delete();
+
+            session()->put('cart', $cart);
         }
+
+        return redirect()->back();
     }
     
     
@@ -121,28 +139,34 @@ class newProductController extends Controller
     
     
     function orderPlace(Request $req)
-    {
-        $userId=Auth::user()->id;
-         $allCart= Cart::where('user_id',$userId)->get();
-         foreach($allCart as $cart)
-         {
-             $order= new Order;
-             $order->product_id=$cart['product_id'];
-             $order->user_id=$cart['user_id'];
-             $order->status="pending";
-             $order->payment_method=$req->payment;
-             $order->payment_status="pending";
-             $order->address=$req->address;
-             $order->save();
-             Cart::where('user_id',$userId)->delete(); 
-         }
-         $req->input();
-         return redirect('/');
+{
+    $userId = Auth::id();
+    $allCart = Cart::where('user_id', $userId)->get();
+    
+    foreach ($allCart as $cart) {
+        $order = new Order;
+        $order->product_id = $cart->product_id;
+        $order->user_id = $cart->user_id;
+        $order->status = "pending";
+        $order->payment_method = $req->payment;
+        $order->payment_status = "pending";
+        $order->address = $req->address;
+        $order->save();
+        
+        $cart->delete();
     }
+
+    $req->session()->forget('cart');
+            
+    $user = Auth::user();
+    $user->address = $req->address;
+    $user->save();
     
+    return redirect('/')->with('success', 'Order placed successfully!');
+}
     
-    function myOrders()
-    {
+function myOrders()
+{
         if(Auth::check()){
             $userId=Auth::user()->id;
             $orders= DB::table('orders')
