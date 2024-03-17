@@ -1,13 +1,73 @@
+*{
+  font-family: "Bebas Neue", sans-serif;
+}
+
 body{
-    background-color: #4A5859;
     font-family: "Bebas Neue", sans-serif;
-    color: aliceblue;
-  }
+    box-sizing: border-box;
+    background-color: #4A5859;
+    color: #F0F2EF;
+}
 
-  a{
-    color: #98D831;
-  }
+a{
+  color: #98D831;
+}
 
-  .trending-wrapper{
-    margin: 20px;
-  }
+.ordercontainer{
+  background-color:#68797b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border: 3px solid #1E1E1E;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #1E1E1E;
+}
+
+.containerleft{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.containerright{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 50%;
+  margin: 10px;
+}
+
+.order-image{
+  background-color: #eceaea;
+  display: flex;
+  box-shadow: 0 2px 5px #1E1E1E;
+  border: 2px solid #4A5859;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+
+h4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  color: #98d831;
+  stroke: #1E1E1E;
+}
+
+h5{
+  color:black;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 24px;
+  flex: 1 100%;
+  max-width: 100%;
+}

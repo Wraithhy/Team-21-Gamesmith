@@ -26,6 +26,12 @@ b{
   max-width: 100%;
 }
 
+.filter_section{
+  margin-left: 10px;
+  font-size: 16px;
+  color: #F0F2EF;
+}
+
 .title{
   display: flex;
   flex-direction: column;
@@ -78,7 +84,7 @@ h2{
   flex-wrap: wrap;
   font-size: 35px;
   max-width: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 h4{

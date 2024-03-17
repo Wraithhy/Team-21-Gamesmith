@@ -65,13 +65,13 @@ a{
 		height: 80%;
 	}
 }
-p.text{
+p{
        font-size: 20px;
-      
    }
    
    h1,h2,h5 {
-       color: #1E1E1E;   
+       color: #98D831;
+       font-size: 40px;
    }
    
    .container2{

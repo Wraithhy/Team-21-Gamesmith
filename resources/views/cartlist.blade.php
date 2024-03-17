@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" href="css/cartlist.css">
 </head>
-
+<body>
 <table id="cart">
 <thead>
     <tr>
@@ -57,5 +57,5 @@
     </tr>
 </tfoot>
 </table>
-
+</body>
 @endsection

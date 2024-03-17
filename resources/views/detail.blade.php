@@ -8,7 +8,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <head>
-
 </head>
 <body>
 <link rel="stylesheet" href=/css/detail.css>

@@ -12,23 +12,12 @@
         </div>
     </div>
     <div class="filter_section">
-        <label for="category">Select Category:</label>
-        <select id="category">
-            <option value="all">All Categories</option>
-            <option value="headsets">Headsets</option>
-            <option value="keyboards">Keyboards</option>
-            <option value="controllers">Controllers</option>
-            <option value="mouses">Mouses</option>
-            <option value="monitors">Monitors</option>
-        </select>
-
         <label for="price">Filter By Price:</label>
         <input type="text" id="minPrice" placeholder="Min Price">
         <input type="text" id="maxPrice" placeholder="Max Price">
 
         <button onclick="applyFilters()">Apply Filters</button> 
     </div>
-
     <h2 id="HeadsetsJump">Headsets</h2>
     <div class="container_grid">
         @foreach ($products->slice(0, 5) as $item)
