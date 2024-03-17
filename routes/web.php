@@ -10,6 +10,8 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\customerController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\orderController;
+use App\Http\Controllers\productReviewController;
+
 use Faker\Guesser\Name;
 
 Auth::routes();
@@ -56,6 +58,7 @@ Route::get("/",[newProductController::class,'index'])->name('homepage');
 
 Route::get("detail/{id}",[newProductController::class,'detail']);
 
+
 Route::get("search",[newProductController::class,'search']);
 
 //Route::post("add_to_cart",[newProductController::class,'addToCart']);
@@ -95,3 +98,4 @@ Route::post('/contact-form/store', [ContactUsController::class, 'store'])->name(
 Route::post('/update-quantity', [newProductController::class,'updateQuantity'])->name('update.quantity');
 
 
+Route::post('/submit_product_form', [newProductController::class, 'store'])->name('submit.product.form');

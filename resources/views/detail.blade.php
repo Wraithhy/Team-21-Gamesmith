@@ -16,7 +16,7 @@
         <div class="containerleft">
             <img class="detail-img" src="/images/{{$product->id}}.png" alt="">
         </div>
-            <div class="containerright">
+        <div class="containerright">
             <a class = "backbutton" href="/">Go Back</a>
             <h2>{{$product['name']}}</h2>
             <h3>Price : £{{$product['price']}}</h3>
@@ -32,9 +32,24 @@
             <!--<button class="addToCart" type="submit">Add to Cart</button>-->
             </form>
         </div>
-        <!--<br><br>
-        <button class="button">Buy Now</button>
-        <br><br>-->
+        @if(Auth::check()) 
+        <form class="reviews" action="/submit_product_form" method="post">
+            @csrf
+            <input type="hidden" name="product_id" value="{{ $product->id }}">
+            <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+            <textarea id="message" name="message" placeholder="Your message here"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        @endif
+
+    </div>
+
+    <div class="reviewContainer">
+
+        @foreach($reviews as $review)
+        
+            <h1>{{$review->message}}</h1>
+        @endforeach
     </div>
 </body>
 @endsection

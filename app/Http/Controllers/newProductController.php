@@ -14,20 +14,23 @@ use Session;
 use Illuminate\Support\Facades\DB;
 class newProductController extends Controller
 {
-    //
     function index()
     {
         $data= Product::all();
 
        return view('homepage',['products'=>$data]);
     }
+
     
+    
+
     function detail($id)
     {
         $data =Product::find($id);
         return view('detail',['product'=>$data]);
     }
     
+
     function search(Request $req)
     {
         $data= Product::
@@ -92,6 +95,7 @@ class newProductController extends Controller
      return Cart::where('user_id',$userId)->count();
     }
     
+
     function cartList()
     {
         $emptCart = new Cart();
