@@ -57,6 +57,19 @@ p1{
   color: #bebebe;
 }
 
+p2{
+  font-family: "Bebas Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: start;
+  font-size: 20px;
+  color: #eceaea;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
 h2{
   font-size: 50px;
   display: flex;
