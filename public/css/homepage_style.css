@@ -24,7 +24,7 @@ a{
 	flex: 1;
 	display: flex;
 	justify-content: center;
-	height: 60vh;
+	height: 40vh;
 }
 .cover img {
 	height: 100%;

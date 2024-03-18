@@ -186,7 +186,7 @@
 </div>
 			</div>
 			<div class="cover">
-				<img src="images/hero.JPG" alt="computing">
+				<img src="images/hero2.png" alt="computing">
 			</div>
 		</section>
 </body>
