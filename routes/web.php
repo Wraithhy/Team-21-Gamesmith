@@ -57,7 +57,6 @@ Route::group(['middleware' => ['auth','admin']], function () {
 Route::get("/",[newProductController::class,'index'])->name('homepage');
 
 Route::get("detail/{id}",[newProductController::class,'detail']);
-Route::get('customerProductReview',[productReviewController::class,'index']);
 
 Route::get("search",[newProductController::class,'search']);
 

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\contactForm;
+use App\Models\productReviews;
+use Illuminate\Support\Facades\DB;
+
 
 class ContactUsController extends Controller
 
@@ -35,10 +38,15 @@ class ContactUsController extends Controller
     }
 
     public function show(){
+        $productReviews = DB::table('product_reviews')
+        ->select('products.name as product_name', 'users.name as user_name', 'product_reviews.message as product_message', 'products.id as product_id')
+        ->join('products', 'product_reviews.product_id', '=', 'products.id')
+        ->join('users', 'product_reviews.user_id', '=', 'users.id')
+        ->get();
 
-        return view('reviews', [
-            'reviews' => contactForm::all()
-        ]);
+       
+
+        return view('reviews', ['products' => $productReviews, 'reviews' => contactForm::all()]);
     }
     
 }

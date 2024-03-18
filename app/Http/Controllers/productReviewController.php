@@ -25,7 +25,7 @@ class productReviewController extends Controller
 
            
     
-            return view('/detail', ['reviews' => $productReviews]);
+            return view('reviews', ['products' => $productReviews]);
         
     }
     
