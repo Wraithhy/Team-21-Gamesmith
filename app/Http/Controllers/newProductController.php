@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Cart;
+use App\Models\productReviews;
+
 use App\Models\User;
 use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
@@ -26,8 +28,15 @@ class newProductController extends Controller
 
     function detail($id)
     {
-        $data =Product::find($id);
-        return view('detail',['product'=>$data]);
+    $product = Product::findOrFail($id);
+    
+    $reviews = ProductReviews::where('product_id', $id)
+    ->select('products.name as product_name', 'users.name as user_name', 'product_reviews.message as product_message')
+    ->join('products', 'product_reviews.product_id', '=', 'products.id')
+    ->join('users', 'product_reviews.user_id', '=', 'users.id')
+    ->get();
+
+    return view('detail', ['product' => $product, 'reviews' => $reviews]);
     }
     
 

@@ -57,7 +57,7 @@ Route::group(['middleware' => ['auth','admin']], function () {
 Route::get("/",[newProductController::class,'index'])->name('homepage');
 
 Route::get("detail/{id}",[newProductController::class,'detail']);
-
+Route::get('customerProductReview',[productReviewController::class,'index']);
 
 Route::get("search",[newProductController::class,'search']);
 
@@ -98,4 +98,4 @@ Route::post('/contact-form/store', [ContactUsController::class, 'store'])->name(
 Route::post('/update-quantity', [newProductController::class,'updateQuantity'])->name('update.quantity');
 
 
-Route::post('/submit_product_form', [newProductController::class, 'store'])->name('submit.product.form');
+Route::post('/submit_product_form', [productReviewController::class, 'store'])->name('submit.product.form');

@@ -44,11 +44,11 @@
     </div>
 
     <div class="reviewContainer">
+    @foreach($reviews as $review)
+    <h1>{{$review->user_name}}</h1>
+    <h1>{{$review->product_message}}</h1>
+@endforeach
 
-        @foreach($reviews as $review)
-        
-            <h1>{{$review->message}}</h1>
-        @endforeach
-    </div>
+</div>
 </body>
 @endsection

@@ -7,6 +7,9 @@ use App\Models\product;
 
 use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\DB;
+
+
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Debug\VirtualRequestStack;
 
@@ -14,11 +17,16 @@ class productReviewController extends Controller
 {
     public function index()
     {
-        {
-            $reviews = ProductReviews::all();
+        $productReviews = DB::table('product_reviews')
+            ->select('products.name as product_name', 'users.name as user_name', 'product_reviews.message as product_message')
+            ->join('products', 'product_reviews.product_id', '=', 'products.id')
+            ->join('users', 'product_reviews.user_id', '=', 'users.id')
+            ->get();
+
+           
     
-            return view('detail', ['reviews' => $reviews]);
-        }
+            return view('/detail', ['reviews' => $productReviews]);
+        
     }
     
 
