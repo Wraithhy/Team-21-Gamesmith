@@ -12,10 +12,10 @@
 <body>
 <link rel="stylesheet" href=/css/detail.css>
     <div class="detailcontainer">
-        <div class="containerleft">
+        <div class="leftcontainer">
             <img class="detail-img" src="/images/{{$product->id}}.png" alt="">
         </div>
-        <div class="containerright">
+        <div class="midcontainer">
             <a class = "backbutton" href="/">Go Back</a>
             <h2>{{$product['name']}}</h2>
             <h3>Price : £{{$product['price']}}</h3>
@@ -31,24 +31,27 @@
             <!--<button class="addToCart" type="submit">Add to Cart</button>-->
             </form>
         </div>
+        <div class="rightcontainer">
         @if(Auth::check()) 
         <form class="reviews" action="/submit_product_form" method="post">
+            <h5>Leave a Review!<h5>
             @csrf
             <input type="hidden" name="product_id" value="{{ $product->id }}">
             <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
-            <textarea id="message" name="message" placeholder="Your message here"></textarea>
-            <button type="submit">Submit</button>
+            <textarea class= "message" id="message" name="message" placeholder="Your message here"></textarea>
+            <button class= "submit" type="submit">Submit</button>
         </form>
         @endif
-
+        </div>
     </div>
-
-    <div class="reviewContainer">
+    <div class="reviewcontainer">
+    <h6>Product Reviews</h6>
     @foreach($reviews as $review)
-    <h1>{{$review->user_name}}</h1>
-    <h1>{{$review->product_message}}</h1>
-@endforeach
-
-</div>
+        <div class="customerreview">
+        <h2>{{$review->user_name}}</h2>
+        <p>{{$review->product_message}}</p>
+        </div>
+    @endforeach
+    </div>
 </body>
 @endsection
