@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/orderNow.css">
 </head>
 <div class="custom-product">
+    <h1>Checkout</h1>
     <div class="col-sm-10">
         <table class="table">
             <tbody>
@@ -30,15 +31,15 @@
             <form action="/orderplace" method="POST">
                 @csrf
                 @method('post')
-                <div class="form-group">
+                <div class="form">
                 <input type="text" placeholder="Address" class="form-control" id="address" name="address" value="{{ Auth::user()->address }}" required>
                 </div>
-                <div class="form-group">
+                <div class="payment">
                     <label for="pwd">Payment Method</label> <br> <br>
                     <input type="radio" value="cash" name="payment"> <span>Online Payment</span> <br> <br>
                     <input type="radio" value="cash" name="payment"> <span>Payment on Delivery</span> <br> <br>
+                    <button type="submit" class="submit-btn">Order Now</button>
                 </div>
-                <button type="submit" class="btn btn-default">Order Now</button>
             </form>
         </div>
     </div>

@@ -8,6 +8,41 @@ body{
     min-height: 100vh;
 }
 
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: #98d831;
+}
+
+.payment{
+    background-color: #667879;
+    border: 1px solid #1E1E1E;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form{
+    margin-bottom: 30px;
+}
+
+label{
+    margin-bottom: -20px;
+    font-size: 30px;
+}
+
+.custom-product{
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn{
+    background-color: #F0F2EF;
+    border: 2px solid #1E1E1E;
+    border-radius: 5px;
+}
+
 a{
     color: #98d831;
 }

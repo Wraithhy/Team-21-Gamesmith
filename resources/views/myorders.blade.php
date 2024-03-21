@@ -8,7 +8,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <head>
-  <h4>Previous Orders</h4>
+  <h4>My Orders</h4>
 </head>
 <body>
 <link rel="stylesheet" href="css/myOrders.css">

@@ -24,9 +24,18 @@ table{
 }
 
 th{
+    padding-left: 5px;
     color: #F0F2EF;
     font-weight: bold;
     font-size: 30px;
     margin: 10px;
     border-bottom: 0.5px solid #F0F2EF;
+}
+
+td{
+    padding-left: 5px;
+}
+
+.button{
+    margin: 5px;
 }
