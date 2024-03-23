@@ -1,0 +1,147 @@
+body {
+    background-color: #4a5859;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.logbutton-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logbtn {
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 400;
+    width: 130px;
+    padding: 10px 0;
+    box-shadow: 0 0 2px #98d831;
+    transition: 0.4s;
+    background-color: #4a5859;
+    color: white;
+    border: 2px solid #98d831;
+    border-radius: 5px;
+}
+
+.logbtn:hover {
+    color: black;
+    box-shadow: 0 0 10px #98d831;
+    background-color: #98d831;
+}
+
+.regbtn {
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 400;
+    width: 130px;
+    padding: 10px 0;
+    box-shadow: 0 0 2px #98d831;
+    transition: 0.4s;
+    background-color: #4a5859;
+    color: white;
+    border: 2px solid #98d831;
+    border-radius: 5px;
+}
+
+.regbtn:hover {
+    color: black;
+    box-shadow: 0 0 10px #98d831;
+    background-color: #98d831;
+}
+
+.containerLogin {
+    padding: 50px;
+}
+
+.col-md-6 {
+    justify-content: center;
+    text-align: left;
+    background-color: #4a5859;
+    width: 50%;
+    padding: 0px;
+    border: 3px solid #98d831;
+    border-radius: 10px;
+    outline: none;
+}
+
+.contact-us {
+    border: 10px solid #98d831;
+    background: #1e1e1e;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 5px solid #98d831;
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-left {
+    color: #98d831;
+    flex-basis: 70%;
+    padding: 40px 60px;
+    margin: auto;
+}
+
+.contact-right {
+    flex-basis: auto;
+    padding: 10px;
+    border: 20px solid #98d831;
+    background: #98d831;
+    border-radius: 8px;
+}
+
+.contact-right a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.containerLogin p {
+    margin-bottom: 40px;
+}
+
+.contact-left h3 {
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.contact-right h3 {
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+tr td:first-child {
+    padding-right: 20px;
+}
+
+tr td {
+    padding-top: 20px;
+}
+
+.LoginIMG {
+    max-width: 90%;
+    display: flex;
+    height: 150px;
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    padding-bottom: 5px;
+}
+
+.form-control {
+    border: none !important;
+    outline: 0;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+a{
+    color: #98d831;
+}

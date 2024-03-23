@@ -1,0 +1,42 @@
+body{
+    font-family: "Bebas Neue", sans-serif;
+    box-sizing: border-box;
+    background-color: #4A5859;
+    color: #F0F2EF;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+a{
+    color: #98d831;
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    color: #98D831;
+    margin: 20px 0;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td{
+    border: 1px solid #F0F2EF;
+    padding: 8px;
+    text-align: left;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+th{
+    background-color: #98D831;
+    color: #4A5859;
+}
+
+form {
+    display: inline-block;
+}

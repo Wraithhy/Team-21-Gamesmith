@@ -1,0 +1,81 @@
+
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            color: #98D831;
+        }
+
+        body {
+            background-color: #4A5859;
+            color: #F0F2EF;
+            font-family: 'Bebas Neue', sans-serif;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f0f2ef;
+        }
+
+        form.editProductForm {
+            width: 70%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #98D831;
+            color: #F0F2EF;
+            border-radius: 8px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .edit-n-input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .edit-p-input {
+            width: 100%;
+            height: 100px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .edit-desc-input {
+            width: 100%;
+            height: 100px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .edit-sbmt-input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #401fff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .edit-sbmt-input:hover {
+            background-color: #007bff;
+        }
