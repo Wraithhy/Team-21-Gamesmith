@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email">Address</label>
                     <input type="text" class="form-control" id="address" name="address" value="{{ Auth::user()->address }}" required>
                 </div>
 
